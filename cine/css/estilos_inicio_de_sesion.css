@@ -1,0 +1,41 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../imagenes/fondologinopcion1.jpeg);
+    background-size: cover;
+}
+
+.form-informacion {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    padding: 5%;
+    margin: 3%;
+    border-radius: 20px;
+    border: solid thin red;
+    /*align-items: center;
+    justify-content:center;
+    text-align: center;*/
+}
+
+.formulario {
+    margin: 30px 0 0 0;
+}
+
+.formulario input {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    padding: 10px;
+}
+
+.formulario button {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    padding: 5px;
+    margin: 20px 5px 0px 0px;
+}
