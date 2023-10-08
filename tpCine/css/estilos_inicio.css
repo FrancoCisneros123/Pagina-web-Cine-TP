@@ -1,0 +1,68 @@
+* {
+    padding: 0%; /*Defino margin, padding y tipografia por default*/
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+#logonav{ /*Tamaño al logo que se encuentra en la esquina superior izquierda*/
+    width: 120px;
+    height: 70px;
+}
+
+body{ /*Todo el body por completo es negro*/
+    background-color: black;
+}
+
+.cards {
+    margin-top: 100px;
+}
+
+.card-individual {
+    margin: 20px 30px 10px 30px;
+    padding: 0%;
+    /*width: 20rem;
+    height: 22rem;*/
+    text-align: justify;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.card-individual:hover {
+    transform: scale(1.09);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.488);
+}
+
+/*estreno*/
+
+.card-individual-estreno {
+    margin: 20px;
+    width: 20rem;
+    height: 34rem;
+    text-align: justify;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.card-individual-estreno:hover {
+    transform: scale(1.09);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.488);
+}
+
+#textocartelera{
+    margin: 30px 10px 10px 10px;
+    color: white;
+}
+
+#textoproximamente{
+    margin: 30px 10px 10px 10px;
+    color: white;
+}
+
+#selectcomplejo{
+    margin-bottom: 20px;
+}
+
+#selectfecha{
+    margin-bottom: 60px;
+}

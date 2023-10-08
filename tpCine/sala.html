@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineEnCartelera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos_sala.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <!--Busca las fuentes a utilizar-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="js/script_sala.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!--barra de navegacion-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark border-3 border-bottom border-danger">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img class="img-thumbnail" src="imagenes/logo_inicio_opcion2.jpeg" alt="CINE EN CARTELERA"
+                        id="logonav">
+                    <!--logo en el extremo superior izquierdo-->
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="MenuNavegacion" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CARTELERA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">COMPLEJOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">PRECIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACTO</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <!--etiqueta de boostrap 5 que coloca elementos en el lugar derecho (en este caso la lupa)-->
+                        <li class="nav-item">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Ingresa tu busqueda"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-warning" type="submit">Buscar</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <h1>Disponibilidad de la sala</h1>
+
+        <div class="cine">
+
+            <!--parte izquierda con sus asientos-->
+            <div class="cine-asientos izquierda">
+                <div class="cine-fila fila-1" id="fila-izquierda-1"></div>
+                <div class="cine-fila fila-2" id="fila-izquierda-2"></div>
+                <div class="cine-fila fila-3" id="fila-izquierda-3"></div>
+                <div class="cine-fila fila-4" id="fila-izquierda-4"></div>
+                <div class="cine-fila fila-5" id="fila-izquierda-5"></div>
+            </div>
+
+            <!--parte derecha con sus asientos-->
+            <div class="cine-asientos derecha">
+                <div class="cine-fila fila-1" id="fila-derecha-1"></div>
+                <div class="cine-fila fila-2" id="fila-derecha-2"></div>
+                <div class="cine-fila fila-3" id="fila-derecha-3"></div>
+                <div class="cine-fila fila-4" id="fila-derecha-4"></div>
+                <div class="cine-fila fila-5" id="fila-derecha-5"></div>
+            </div>
+        </div>
+
+        <!--reserva-->
+
+        <h2>Referencias</h2>
+
+        <div class="referencias">
+
+            <p>Libre</p>
+            <div class="cine-fila fila-ejemplo" id="fila-ejemplo">
+                <div class="asiento ejemplo" id="asiento-libre-ejemplo"></div>
+            </div>
+
+            <p>Reservado</p>
+            <div class="cine-fila fila-ejemplo" id="fila-ejemplo">
+                <div class="asiento ejemplo" id="asiento-reservado-ejemplo"></div>
+            </div>
+
+            <p>Ocupado</p>
+            <div class="cine-fila fila-ejemplo" id="fila-ejemplo">
+                <div class="asiento ejemplo" id="asiento-ocupado-ejemplo"></div>
+            </div>
+        </div>
+
+        <!--reserva-->
+        <div class="reserva">
+
+            <h2>Reserva</h2>
+
+            <div class="row align-items-center">
+
+                <div class="col-auto">
+                    <select class="form-select" id="dropdownAsiento">
+                        <option selected>Seleccionar asiento</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-success col-auto" type="submit">Reservar asiento</button>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
