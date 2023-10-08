@@ -48,3 +48,21 @@ body{ /*Todo el body por completo es negro*/
     transform: scale(1.09);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.488);
 }
+
+#textocartelera{
+    margin: 30px 10px 10px 10px;
+    color: white;
+}
+
+#textoproximamente{
+    margin: 30px 10px 10px 10px;
+    color: white;
+}
+
+#selectcomplejo{
+    margin-bottom: 20px;
+}
+
+#selectfecha{
+    margin-bottom: 60px;
+}
