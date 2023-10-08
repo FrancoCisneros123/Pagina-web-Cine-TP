@@ -1,0 +1,159 @@
+* {
+    padding: 0%;
+    /*Defino margin, padding y tipografia por default*/
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+#logonav {
+    /*Tamaño al logo que se encuentra en la esquina superior izquierda*/
+    width: 120px;
+    height: 70px;
+}
+
+body {
+    background: #111;
+}
+
+h1, h2 {
+    color: #b0aeae;
+}
+
+h1 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cine {
+    display: flex;
+    position: relative;
+}
+
+.cine-asientos {
+    /*centro los asientos*/
+    display: flex;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+/*estilo de los asientos*/
+.asiento {
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+    background: linear-gradient(to top, #545454, #bababa);
+    margin-bottom: 10px;
+    margin-top: -32px;
+    /*pongo un valor negativo para que los asientos queden cerca verticalmente*/
+    text-align: center;
+}
+
+/*asientos del lado izquierdo*/
+.izquierda {
+    .cine-fila {
+        transform: skew(-15deg);
+        margin: 0 6px;
+    }
+
+    .asiento {
+        transform: skew(20deg);
+    }
+
+    /*roto los asientos y las filas*/
+    .fila-1 {
+        transform: skew(-14deg);
+
+        .asiento {
+            transform: skew(20deg);
+        }
+    }
+
+    .fila-2 {
+        transform: skew(-13deg);
+
+        .asiento {
+            transform: skew(18deg);
+        }
+    }
+
+    .fila-3 {
+        transform: skew(-12deg);
+
+        .asiento {
+            transform: skew(16deg);
+        }
+    }
+
+    .fila-4 {
+        transform: skew(-11deg);
+
+        .asiento {
+            transform: skew(15deg);
+        }
+    }
+
+    .fila-5 {
+        transform: skew(-10deg);
+
+        .asiento {
+            transform: skew(12deg);
+        }
+    }
+}
+
+/*asientos del lado derecho*/
+.derecha {
+    margin-left: 70px;
+
+    .cine-fila {
+        transform: skew(7deg);
+        margin: 0 6px;
+    }
+
+    /*roto los asientos y las filas*/
+    .fila-1 {
+        transform: skew(8deg);
+
+        .asiento {
+            transform: skew(-10deg);
+        }
+    }
+
+    .fila-2 {
+        transform: skew(9deg);
+
+        .asiento {
+            transform: skew(-10deg);
+        }
+    }
+
+    .fila-3 {
+        transform: skew(10deg);
+
+        .asiento {
+            transform: skew(-12deg);
+        }
+    }
+
+    .fila-4 {
+        transform: skew(11deg);
+
+        .asiento {
+            transform: skew(-15deg);
+        }
+    }
+
+    .fila-5 {
+        transform: skew(12deg);
+
+        .asiento {
+            transform: skew(-16deg);
+        }
+    }
+}
+
+.reserva {
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
