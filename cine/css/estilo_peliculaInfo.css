@@ -1,0 +1,9 @@
+div.container#informacion{
+    background-color: rgb(84, 80, 80);
+    color: white;
+}
+
+h1#titulo{
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(216, 208, 208);
+}
