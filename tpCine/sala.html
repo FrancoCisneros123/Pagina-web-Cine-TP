@@ -68,47 +68,51 @@
 
         <h1>Disponibilidad de la sala</h1>
 
+        <!--asientos---->
         <div class="cine">
 
-            <!--parte izquierda con sus asientos-->
-            <div class="cine-asientos izquierda">
-                <div class="cine-fila fila-1" id="fila-izquierda-1"></div>
-                <div class="cine-fila fila-2" id="fila-izquierda-2"></div>
-                <div class="cine-fila fila-3" id="fila-izquierda-3"></div>
-                <div class="cine-fila fila-4" id="fila-izquierda-4"></div>
-                <div class="cine-fila fila-5" id="fila-izquierda-5"></div>
+            <div class="row">
+
+                <!--parte izquierda con sus asientos-->
+                <div class="col-12 col-xs-6 col-md-6 col-lg-6 ">
+                    <div class="cine-asientos izquierda">
+                        <div class="cine-fila fila-1" id="fila-izquierda-1"></div>
+                        <div class="cine-fila fila-2" id="fila-izquierda-2"></div>
+                        <div class="cine-fila fila-3" id="fila-izquierda-3"></div>
+                        <div class="cine-fila fila-4" id="fila-izquierda-4"></div>
+                        <div class="cine-fila fila-5" id="fila-izquierda-5"></div>
+                    </div>
+                </div>
+
+                <!--parte derecha con sus asientos-->
+                <div class="col-12 col-xs-6 col-md-6 col-lg-6">
+                    <div class="cine-asientos derecha">
+                        <div class="cine-fila fila-1" id="fila-derecha-1"></div>
+                        <div class="cine-fila fila-2" id="fila-derecha-2"></div>
+                        <div class="cine-fila fila-3" id="fila-derecha-3"></div>
+                        <div class="cine-fila fila-4" id="fila-derecha-4"></div>
+                        <div class="cine-fila fila-5" id="fila-derecha-5"></div>
+                    </div>
+                </div>
+
             </div>
 
-            <!--parte derecha con sus asientos-->
-            <div class="cine-asientos derecha">
-                <div class="cine-fila fila-1" id="fila-derecha-1"></div>
-                <div class="cine-fila fila-2" id="fila-derecha-2"></div>
-                <div class="cine-fila fila-3" id="fila-derecha-3"></div>
-                <div class="cine-fila fila-4" id="fila-derecha-4"></div>
-                <div class="cine-fila fila-5" id="fila-derecha-5"></div>
-            </div>
         </div>
 
-        <!--reserva-->
-
+        <!--Referencias-->
         <h2>Referencias</h2>
 
         <div class="referencias">
 
-            <p>Libre</p>
-            <div class="cine-fila fila-ejemplo" id="fila-ejemplo">
-                <div class="asiento ejemplo" id="asiento-libre-ejemplo"></div>
-            </div>
+            <p class="parrafo-referencia">Libre</p>
+            <div class="asiento ejemplo" id="asiento-libre-ejemplo"></div>
 
-            <p>Reservado</p>
-            <div class="cine-fila fila-ejemplo" id="fila-ejemplo">
-                <div class="asiento ejemplo" id="asiento-reservado-ejemplo"></div>
-            </div>
+            <p class="parrafo-referencia">Reservado</p>
+            <div class="asiento ejemplo" id="asiento-reservado-ejemplo"></div>
 
-            <p>Ocupado</p>
-            <div class="cine-fila fila-ejemplo" id="fila-ejemplo">
-                <div class="asiento ejemplo" id="asiento-ocupado-ejemplo"></div>
-            </div>
+            <p class="parrafo-referencia">Ocupado</p>
+            <div class="asiento ejemplo" id="asiento-ocupado-ejemplo"></div>
+
         </div>
 
         <!--reserva-->
@@ -124,23 +128,13 @@
                     </select>
                 </div>
 
-                <button class="btn btn-success col-auto" type="submit">Reservar asiento</button>
-            </div>
-
-            <br><div class="row align-items-center">
                 <div class="col-auto">
-                    <h3>Seleccione la cantidad de entradas:</h3>
-                    <input type="number" class="form-control" min="1" max="50">  
+                    <button class="btn btn-success col-auto" type="submit">Reservar asiento</button>
                 </div>
-                    <h2>Precio: $1200</h2>
-                    
             </div>
-           
         </div>
-        <h2>Atención: La funcion no es para el día de hoy</h2>
-        <button class="btn btn-success">Realizar compra</button>
-    </div>
 
+    </div>
 </body>
 
 </html>
