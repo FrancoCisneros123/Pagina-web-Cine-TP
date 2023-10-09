@@ -16,28 +16,29 @@ body {
     background: #111;
 }
 
-h1,
-h2,
-h3,
-p {
-    color: #b0aeae;
-    margin-top: 30px;
-}
-
 h1 {
     text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    color: #b0aeae;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .cine {
     display: flex;
     position: relative;
+    margin-left: 3em;
+    margin-top: 100px;
 }
 
 .cine-asientos {
     /*centro los asientos*/
     display: flex;
-    margin-left: 30%;
-    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 /*estilo de los asientos*/
@@ -52,8 +53,48 @@ h1 {
     text-align: center;
 }
 
+/*muevo los asientos segun la dimension de la pagina*/
+@media (max-width: 1999.98px) {
+    .cine-asientos {
+        margin-left: 60%;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .cine-asientos {
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .cine-asientos {
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 761.98px) {
+    .cine-asientos {
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 567.98px) {
+    .cine-asientos {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 467.98px) {
+    .cine-asientos {
+        margin-left: -2%;
+    }
+}
+
 /*asientos del lado izquierdo*/
 .izquierda {
+
+    margin-right: 400px;
+
     .cine-fila {
         transform: skew(-15deg);
         margin: 0 6px;
@@ -107,7 +148,6 @@ h1 {
 
 /*asientos del lado derecho*/
 .derecha {
-    margin-left: 70px;
 
     .cine-fila {
         transform: skew(7deg);
@@ -156,13 +196,34 @@ h1 {
     }
 }
 
+/*referencias*/
+
 .fila-ejemplo {
     margin-top: 50px;
 }
 
 .referencias {
-    display: flex;
+    display: inline-flex;
+    margin-top: 30px;
 }
+
+/*cambio el estilo de las referencias a bloque, si la pantalla es muy limitada*/
+@media screen and (max-width: 467.98px) {
+    .referencias {
+        display: block;
+        margin-top: 30px;
+    }
+}
+
+.parrafo-referencia {
+    color: #b0aeae;
+    margin-bottom: 20px;
+}
+
+.ejemplo {
+    margin-top: -10px;
+}
+
 
 #asiento-libre-ejemplo {
     margin-left: 10px;
