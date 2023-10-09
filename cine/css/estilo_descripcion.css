@@ -20,10 +20,9 @@ body{ /*Todo el body por completo es negro*/
 }
 
 .card-individual {
-    margin: 20px 30px 10px 30px;
-    padding: 0%;
-    /*width: 20rem;
-    height: 22rem;*/
+    margin: 20px;
+    width: 20rem;
+    height: 22rem;
     text-align: justify;
     transition: .2s;
     cursor: pointer;
@@ -48,24 +47,6 @@ body{ /*Todo el body por completo es negro*/
 .card-individual-estreno:hover {
     transform: scale(1.09);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.488);
-}
-
-#textocartelera{
-    margin: 30px 10px 10px 10px;
-    color: white;
-}
-
-#textoproximamente{
-    margin: 30px 10px 10px 10px;
-    color: white;
-}
-
-#selectcomplejo{
-    margin-bottom: 20px;
-}
-
-#selectfecha{
-    margin-bottom: 60px;
 
 }
 
@@ -76,4 +57,19 @@ body{ /*Todo el body por completo es negro*/
 
 .parrafo-descripcion{
     font-size: 18px;
+    text-align: justify;
+    margin-top: 10px;
 }
+
+ h1, h2, h3{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#disponibilidad{
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+
+
