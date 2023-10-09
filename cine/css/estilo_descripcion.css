@@ -57,4 +57,7 @@ body{ /*Todo el body por completo es negro*/
 
 .parrafo-descripcion{
     font-size: 18px;
+    text-align: justify;
+    margin-top: 10px;
 }
+
