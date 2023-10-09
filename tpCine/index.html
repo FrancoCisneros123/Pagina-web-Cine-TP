@@ -17,21 +17,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <script src="js/script.js"></script>
+    <script defer src="js/script_inicio_de_sesion.js"></script>
 </head>
 
 <body>
     <div class="form-informacion" style="background-color: white">
         <h2>Iniciar sesión</h2>
         <p>Recuerda que es tu cuenta registrada en CineEnCartelera.com</p>
-        <form class="formulario">
+        <form action="inicio.html" class="formulario" id="formLogin">
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com" required>
+                <input type="email" class="form-control" id="emailLogin" placeholder="nombre@ejemplo.com" required>
                 <label for="floatingInput">Email</label>
+                <div class="invalid-feedback">El email ingresado es incorrecto</div>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required>
+                <input type="password" class="form-control" id="passwordLogin" placeholder="Contraseña" required>
                 <label for="floatingPassword">Contraseña</label>
+                <div class="invalid-feedback">La contraseña ingresado es incorrecto</div>
             </div>
             <a href="url">Olvide mi contraseña</a>
             <div class="d-grid gap-2 col-6 mx-auto">
