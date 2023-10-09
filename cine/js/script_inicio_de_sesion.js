@@ -58,7 +58,7 @@ function validarPassword(passwordIngresada,usuarios)
 }
 
 let botonMostrarContrasenia = document.getElementById("mostrarContrasenia");
-let contrasenia = document.getElementById("floatingPassword");
+let contrasenia = document.getElementById("passwordLogin");
 
 botonMostrarContrasenia.addEventListener("click", () => {
     mostrarContrasenia()
