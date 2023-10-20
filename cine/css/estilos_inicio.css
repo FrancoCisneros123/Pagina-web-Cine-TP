@@ -77,3 +77,8 @@ body{ /*Todo el body por completo es negro*/
 .parrafo-descripcion{
     font-size: 18px;
 }
+
+/*IMG pagina COMPLEJOS*/
+.carousel-item img {
+    max-height: 500px; /* Ajusta el valor según tu preferencia para reducir la altura del carrousel */
+}
