@@ -1,0 +1,248 @@
+* {
+    padding: 0%;
+    /*Defino margin, padding y tipografia por default*/
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+#logonav {
+    /*Tamaño al logo que se encuentra en la esquina superior izquierda*/
+    width: 120px;
+    height: 70px;
+}
+
+body {
+    background: #111;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    color: #b0aeae;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.cine {
+    display: flex;
+    position: relative;
+    margin-left: 3em;
+    margin-top: 100px;
+}
+
+.cine-asientos {
+    /*centro los asientos*/
+    display: flex;
+    margin-bottom: 10%;
+}
+
+/*estilo de los asientos*/
+.asiento {
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+    background: linear-gradient(to top, #545454, #bababa);
+    margin-bottom: 10px;
+    margin-top: -32px;
+    /*pongo un valor negativo para que los asientos queden cerca verticalmente*/
+    text-align: center;
+}
+
+/*muevo los asientos segun la dimension de la pagina*/
+@media (max-width: 1999.98px) {
+    .cine-asientos {
+        margin-left: 60%;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .cine-asientos {
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .cine-asientos {
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 761.98px) {
+    .cine-asientos {
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 567.98px) {
+    .cine-asientos {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 467.98px) {
+    .cine-asientos {
+        margin-left: -2%;
+    }
+}
+
+/*asientos del lado izquierdo*/
+.izquierda {
+
+    margin-right: 400px;
+
+    .cine-fila {
+        transform: skew(-15deg);
+        margin: 0 6px;
+    }
+
+    .asiento {
+        transform: skew(20deg);
+    }
+
+    /*roto los asientos y las filas*/
+    .fila-1 {
+        transform: skew(-14deg);
+
+        .asiento {
+            transform: skew(20deg);
+        }
+    }
+
+    .fila-2 {
+        transform: skew(-13deg);
+
+        .asiento {
+            transform: skew(18deg);
+        }
+    }
+
+    .fila-3 {
+        transform: skew(-12deg);
+
+        .asiento {
+            transform: skew(16deg);
+        }
+    }
+
+    .fila-4 {
+        transform: skew(-11deg);
+
+        .asiento {
+            transform: skew(15deg);
+        }
+    }
+
+    .fila-5 {
+        transform: skew(-10deg);
+
+        .asiento {
+            transform: skew(12deg);
+        }
+    }
+}
+
+/*asientos del lado derecho*/
+.derecha {
+
+    .cine-fila {
+        transform: skew(7deg);
+        margin: 0 6px;
+    }
+
+    /*roto los asientos y las filas*/
+    .fila-1 {
+        transform: skew(8deg);
+
+        .asiento {
+            transform: skew(-10deg);
+        }
+    }
+
+    .fila-2 {
+        transform: skew(9deg);
+
+        .asiento {
+            transform: skew(-10deg);
+        }
+    }
+
+    .fila-3 {
+        transform: skew(10deg);
+
+        .asiento {
+            transform: skew(-12deg);
+        }
+    }
+
+    .fila-4 {
+        transform: skew(11deg);
+
+        .asiento {
+            transform: skew(-15deg);
+        }
+    }
+
+    .fila-5 {
+        transform: skew(12deg);
+
+        .asiento {
+            transform: skew(-16deg);
+        }
+    }
+}
+
+/*referencias*/
+
+.fila-ejemplo {
+    margin-top: 50px;
+}
+
+.referencias {
+    display: inline-flex;
+    margin-top: 30px;
+}
+
+/*cambio el estilo de las referencias a bloque, si la pantalla es muy limitada*/
+@media screen and (max-width: 467.98px) {
+    .referencias {
+        display: block;
+        margin-top: 30px;
+    }
+}
+
+.parrafo-referencia {
+    color: #b0aeae;
+    margin-bottom: 20px;
+}
+
+.ejemplo {
+    margin-top: -10px;
+}
+
+
+#asiento-libre-ejemplo {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#asiento-reservado-ejemplo {
+    background: linear-gradient(to top, #060136, #2205c6);
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#asiento-ocupado-ejemplo {
+    background: linear-gradient(to top, #360101, #c60505);
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.reserva {
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
