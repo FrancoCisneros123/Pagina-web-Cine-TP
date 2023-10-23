@@ -80,5 +80,5 @@ body{ /*Todo el body por completo es negro*/
 
 /*IMG pagina COMPLEJOS*/
 .carousel-item img {
-    max-height: 500px; /* Ajusta el valor según tu preferencia para reducir la altura del carrousel */
+    max-height: 650px; /* Ajusta el valor según tu preferencia para reducir la altura del carrousel */
 }
