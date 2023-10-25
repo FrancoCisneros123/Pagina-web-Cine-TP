@@ -83,6 +83,7 @@ body{ /*Todo el body por completo es negro*/
     max-height: 650px; /* Ajusta el valor según tu preferencia para reducir la altura del carrousel */
 }
 
+/*menu*/
 #busqueda {
     margin-bottom: 20px;
 }

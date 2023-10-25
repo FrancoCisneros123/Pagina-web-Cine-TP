@@ -7,3 +7,12 @@ h1#titulo{
     font-family:Arial, Helvetica, sans-serif;
     color:rgb(216, 208, 208);
 }
+
+/*menu*/
+#busqueda {
+    margin-bottom: 20px;
+}
+
+#inicar-sesion {
+    margin-left: 20px;
+}
