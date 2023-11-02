@@ -91,3 +91,7 @@ body{ /*Todo el body por completo es negro*/
 #inicar-sesion {
     margin-left: 20px;
 }
+
+#imagen-pelicula {
+    margin-left: 40%;
+}
