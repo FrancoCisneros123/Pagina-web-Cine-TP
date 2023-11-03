@@ -71,5 +71,11 @@ body{ /*Todo el body por completo es negro*/
 
 }
 
+/*menu*/
+#busqueda {
+    margin-bottom: 20px;
+}
 
-
+#inicar-sesion {
+    margin-left: 20px;
+}

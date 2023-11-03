@@ -9,8 +9,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos_inicio.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
     <!--Busca las fuentes a utilizar-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,8 @@
             <div class="container-fluid">
                 <a href="#" class="navbar-brand">
                     <img class="img-thumbnail" src="imagenes/logo_inicio_opcion2.jpeg" alt="CINE EN CARTELERA"
-                        id="logonav"> <!--logo en el extremo superior izquierdo-->
+                        id="logonav">
+                    <!--logo en el extremo superior izquierdo-->
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
                     <span class="navbar-toggler-icon"></span>
@@ -47,13 +48,22 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <!--etiqueta de boostrap 5 que coloca elementos en el lugar derecho (en este caso la lupa)-->
-                        <li class="nav-item">
+
+                        <li class="nav-item" id="busqueda">
                             <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Ingresa tu busqueda"
+                                <input class="form-control me-2 " type="search" placeholder="Ingresa tu busqueda"
                                     aria-label="Search">
                                 <button class="btn btn-outline-warning" type="submit">Buscar</button>
                             </form>
                         </li>
+
+                        <!--boton de inicio de sesion-->
+                        <li class="nav-item" id="inicar-sesion">
+                            <form class="d-flex">
+                                <a href="index.html" class="btn btn-outline-success" type="submit">Iniciar sesion</a>
+                            </form>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -528,7 +538,7 @@
         </div>
     </div>
 
-
+    <!--footer-->
     <div class="container-fluid">
         <div class="row p-5 pb-2 bg-dark text-white">
 
@@ -545,7 +555,8 @@
                 </div>
 
                 <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="preguntasfrecuentes.html">Preguntas frecuentes</a>
+                    <a class="text-secondary text-decoration-none" href="preguntasfrecuentes.html">Preguntas
+                        frecuentes</a>
                 </div>
 
                 <div class="mb-2">
@@ -596,7 +607,8 @@
 
             </div>
 
-            <div class="col-xs-12 pt-4"> <!--pt = padding top 4-->
+            <div class="col-xs-12 pt-4">
+                <!--pt = padding top 4-->
                 <p class="text-white text-center">Copyright - todos los derechos reservados © 2023</p>
             </div>
         </div>

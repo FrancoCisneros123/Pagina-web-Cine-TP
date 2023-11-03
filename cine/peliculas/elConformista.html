@@ -20,8 +20,7 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-
+  
         <!--barra de navegacion-->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark border-3 border-bottom border-danger">
             <div class="container-fluid">
@@ -36,32 +35,41 @@
                 <div id="MenuNavegacion" class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CARTELERA</a>
+                            <a class="nav-link" href="../inicio.html">CARTELERA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">COMPLEJOS</a>
+                            <a class="nav-link" href="../complejos.html">COMPLEJOS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">PRECIOS</a>
+                            <a class="nav-link" href="../precios.html">PRECIOS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACTO</a>
+                            <a class="nav-link" href="../contacto.html">CONTACTO</a>
                         </li>
                     </ul>
+
                     <ul class="navbar-nav ms-auto">
                         <!--etiqueta de boostrap 5 que coloca elementos en el lugar derecho (en este caso la lupa)-->
-                        <li class="nav-item">
+                        <li class="nav-item" id="busqueda">
                             <form class="d-flex">
                                 <input class="form-control me-2" type="search" placeholder="Ingresa tu busqueda"
                                     aria-label="Search">
                                 <button class="btn btn-outline-warning" type="submit">Buscar</button>
                             </form>
                         </li>
+
+                        <!--boton de inicio de sesion-->
+                        <li class="nav-item" id="inicar-sesion">
+                            <form class="d-flex">
+                                <a href="../index.html" class="btn btn-outline-success" type="submit">Iniciar sesion</a>
+                            </form>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
         </nav>
-    </div>
+        
 
     <div class="container" id="informacion" >
         <div class="row">
@@ -139,6 +147,8 @@
 
         
     </div>
+   
+    <!--footer-->
     <footer class="container-fluid">
         <div class="row p-5 pb-2 bg-dark text-white">
 
@@ -155,19 +165,19 @@
                 </div>
 
                 <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Terminos y condiciones</a>
+                    <a class="text-secondary text-decoration-none" href="../terminos.html">Terminos y condiciones</a>
                 </div>
 
                 <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Politica de privacidad</a>
+                    <a class="text-secondary text-decoration-none" href="../">Politica de privacidad</a>
                 </div>
 
                 <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Preguntas frecuentes</a>
+                    <a class="text-secondary text-decoration-none" href="../preguntasfrecuentes.html">Preguntas frecuentes</a>
                 </div>
 
                 <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Cartelera</a>
+                    <a class="text-secondary text-decoration-none" href="../inicio.html">Cartelera</a>
                 </div>
 
             </div>
@@ -176,15 +186,15 @@
                 <p class="h5 mb-5">COMPLEJOS</p>
 
                 <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Canning</a>
+                    <a class="text-secondary text-decoration-none" href="../complejo_canning.html">Canning</a>
                 </div>
 
                 <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Madero</a>
+                    <a class="text-secondary text-decoration-none" href="../complejo_puerto.html">Madero</a>
                 </div>
 
                 <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Lomas de zamora</a>
+                    <a class="text-secondary text-decoration-none" href="../complejo_lomas.html">Lomas de zamora</a>
                 </div>
 
             </div>
