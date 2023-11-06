@@ -1,3 +1,11 @@
+<?php
+require 'registrarsebd.php';
+$objregistrarsebd = new registrarsebd;
+
+$objregistrarsebd->registrarUsuariobd();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +32,21 @@
     <div class="form-informacion" style="background-color: white">
         <h2>Registrarse</h2>
         <p>Complete los campos a continuacion para crear una cuenta</p>
-        <form class="formulario" action="registrarsebd.php" method="post">
+        <?php
+                if ($objregistrarsebd->blAlert) {
+                    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">';
+                    echo 'Usuario registrado correctamente';
+                    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                    echo '</div>';
+                }
+                if ($objregistrarsebd->blAlertError) {
+                    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';                            
+                    echo 'Hubo un error: ' . $objregistrarsebd->lastError;
+                    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                    echo '</div>';
+                }
+                ?>
+        <form class="formulario" action="" method="post">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-6">
