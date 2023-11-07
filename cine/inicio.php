@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["emailLogin"])){ //si no esta seteado
+    header("location: index.php"); //redirige al login 
+    die(); //finalizaria la ejecucion de este script ya que el usuario no inicio sesion
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +31,7 @@
 <body>
     <div class="container-fluid" style="padding: 0%;">
         <!--barra de navegacion-->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark border-3 border-bottom border-danger">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-3 border-bottom border-danger">
             <div class="container-fluid">
                 <a href="#" class="navbar-brand">
                     <img class="img-thumbnail" src="imagenes/logo_inicio_opcion2.jpeg" alt="CINE EN CARTELERA"
@@ -57,10 +67,10 @@
                             </form>
                         </li>
 
-                        <!--boton de inicio de sesion-->
-                        <li class="nav-item" id="inicar-sesion">
+                        <!--boton de cerrar sesion-->
+                        <li class="nav-item" id="cerrar-sesion">
                             <form class="d-flex">
-                                <a href="index.html" class="btn btn-outline-success" type="submit">Iniciar sesion</a>
+                            <a href="desloguear.php" class="btn btn-outline-danger" type="submit">Logout</a>
                             </form>
                         </li>
 
