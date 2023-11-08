@@ -124,7 +124,7 @@ if (isset($_SESSION["emailLogin"])){ //si ya ingreso, lo redirigimos a inicio, n
             ?>
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-primary" type="submit">Acceder</button>
-                <a href="registrarse.php" class="btn btn-outline-dark" id="btnregistrar">Registrarse</a>
+                <a href="MVC/validarUsuario" class="btn btn-outline-dark" id="btnregistrar">Registrarse</a>
             </div>
         </form>
     </div>
