@@ -23,54 +23,7 @@
 
 <body>
 
-     <!--barra de navegacion-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark border-3 border-bottom border-danger">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img class="img-thumbnail" src="imagenes/logo_inicio_opcion2.jpeg" alt="CINE EN CARTELERA"
-                    id="logonav">
-                <!--logo en el extremo superior izquierdo-->
-            </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="MenuNavegacion" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="inicio.php">CARTELERA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="complejos.html">COMPLEJOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="precios.html">PRECIOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">CONTACTO</a>
-                    </li>
-                </ul>
-
-                <ul class="navbar-nav ms-auto">
-                    <!--etiqueta de boostrap 5 que coloca elementos en el lugar derecho (en este caso la lupa)-->
-                    <li class="nav-item" id="busqueda">
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Ingresa tu busqueda"
-                                aria-label="Search">
-                            <button class="btn btn-outline-warning" type="submit">Buscar</button>
-                        </form>
-                    </li>
-
-                    <!--boton de inicio de sesion-->
-                    <li class="nav-item" id="inicar-sesion">
-                        <form class="d-flex">
-                            <a href="index.html" class="btn btn-outline-success" type="submit">Iniciar sesion</a>
-                        </form>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+<?php require_once "barra_navegacion.html"; ?>
 
     <div class="container" id="informacion">
         <div class="row">
@@ -163,88 +116,6 @@
 
     </div>
 
-    <!--footer-->
-    <footer class="container-fluid">
-        <div class="row p-5 pb-2 bg-dark text-white">
-
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <p class="h3">CINE EN CARTELERA</p>
-            </div>
-
-            <div class="col-xs-12 col-md-6 col-lg-3">
-
-                <p class="h5 mb-5">SOBRE NOSOTROS</p>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Informacion general</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="terminos.html">Terminos y condiciones</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Politica de privacidad</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="preguntasfrecuentes.html">Preguntas
-                        frecuentes</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="inicio.html">Cartelera</a>
-                </div>
-
-            </div>
-
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <p class="h5 mb-5">COMPLEJOS</p>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="complejo_canning.html">Canning</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="complejo_puerto.html">Madero</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="complejo_lomas.html">Lomas de zamora</a>
-                </div>
-
-            </div>
-
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <p class="h5 mb-5">CONTACTO</p>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Whatsapp: +54 11 3957-3564</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Instagram: cine_en_cartelera_ok</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">X: cine_en_cartelera_x</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Tik-tok: cine_en_cartelera_tt</a>
-                </div>
-
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="">Mail: cineencartelera@gmail.com</a>
-                </div>
-
-            </div>
-
-            <div class="col-xs-12 pt-4">
-                <!--pt = padding top 4-->
-                <p class="text-white text-center">Copyright - todos los derechos reservados © 2023</p>
-            </div>
-        </div>
-    </footer>
+    <?php require_once "footer.html"; ?>
 
 </body>
