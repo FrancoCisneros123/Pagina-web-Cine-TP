@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2023 a las 10:50:22
+-- Tiempo de generación: 08-11-2023 a las 13:05:11
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -77,17 +77,21 @@ INSERT INTO `categoria` (`id_categoria`, `nombre_categoria`) VALUES
 
 CREATE TABLE `complejo` (
   `id_complejo` int(11) NOT NULL,
-  `nombre_complejo` varchar(100) NOT NULL
+  `nombre_complejo` varchar(100) NOT NULL,
+  `direccion` varchar(500) NOT NULL,
+  `descripcion` varchar(5000) NOT NULL,
+  `direccion_maps` varchar(5000) NOT NULL,
+  `nombre_imagen` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `complejo`
 --
 
-INSERT INTO `complejo` (`id_complejo`, `nombre_complejo`) VALUES
-(1, 'Canning'),
-(2, 'Puerto Madero'),
-(3, 'Lomas de Zamora');
+INSERT INTO `complejo` (`id_complejo`, `nombre_complejo`, `direccion`, `descripcion`, `direccion_maps`, `nombre_imagen`) VALUES
+(1, 'Canning', 'Formosa 653 Canning, Ezeiza (Shopping Las Toscas)', '<p>Este complejo está ubicado en Canning, Ezeiza, en la zona urbanística\r\n                        de mayor crecimiento del\r\n                        Gran Buenos Aires de los últimos años.</p>\r\n\r\n                    <p>Este complejo de 6 salas se complementa excelentemente bien con los locales comerciales y\r\n                        especialmente gastronómicos del Shopping Las Toscas, dentro del cual se encuentra funcionando,\r\n                        brindando al espectador la posibilidad de disfrutar de una salida completa dentro del mismo\r\n                        ámbito.</p>\r\n\r\n                    <p>Es de destacar que todas las salas poseen la mejor tecnología de proyección, sonido digital y\r\n                        salas con proyección digital 2D y 3D.</p>\r\n\r\n                    <p>En septiembre de 2019 Cine en cartelera Canning instaló en su sala\r\n                        N°1 el primer proyector de\r\n                        cine en\r\n                        Argentina con tecnología Láser 4K RGB. Un sistema que ofrece mejor definición a la experiencia\r\n                        visual, una innovación en la industria del cine argentino. Recomendación especial para los\r\n                        espectadores que buscan nuevas experiencias y sensaciones, esta sala le ofrece al cliente\r\n                        calidad de proyección única que a la fecha no existe en el país. Hoy no todos los films poseen\r\n                        calidad necesaria para exhibirse en Láser 4K, se espera únicamente para los estrenos\r\n                        importantes. La primera película exhibida en este formato fue “Guasón” con fecha de estreno 3 de\r\n                        octubre de 2019.</p>', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.986876791956!2d-58.50665102551991!3d-34.8565570708929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd13e3bc7b6c7%3A0xd9970de89e32ab48!2sLas%20Toscas%20Canning%20Shopping!5e0!3m2!1ses-419!2sar!4v1697828719853!5m2!1ses-419!2sar', 'imagenes/establecimiento_cine_complejos.jpeg'),
+(2, 'Puerto Madero', 'Formosa 653 Puerto Madero, (Shopping Puerto)', '    <p>Este complejo está ubicado en Puerto Madero, Buenos Aires</p>\r\n\r\n                    <p>Este complejo de 6 salas se complementa excelentemente bien con los locales comerciales y\r\n                        especialmente gastronómicos del Shopping Puerto, dentro del cual se encuentra funcionando,\r\n                        brindando al espectador la posibilidad de disfrutar de una salida completa dentro del mismo\r\n                        ámbito.</p>\r\n\r\n                    <p>Es de destacar que todas las salas poseen la mejor tecnología de proyección, sonido digital y\r\n                        salas con proyección digital 2D y 3D.</p>\r\n\r\n                    <p>En septiembre de 2019 Cine en cartelera Puerto Madero instaló en su\r\n                        sala N°1 el primer proyector de\r\n                        cine en\r\n                        Argentina con tecnología Láser 4K RGB. Un sistema que ofrece mejor definición a la experiencia\r\n                        visual, una innovación en la industria del cine argentino. Recomendación especial para los\r\n                        espectadores que buscan nuevas experiencias y sensaciones, esta sala le ofrece al cliente\r\n                        calidad de proyección única que a la fecha no existe en el país. Hoy no todos los films poseen\r\n                        calidad necesaria para exhibirse en Láser 4K, se espera únicamente para los estrenos\r\n                        importantes. La primera película exhibida en este formato fue “Guasón” con fecha de estreno 3 de\r\n                        octubre de 2019.</p>', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52538.06130269082!2d-58.39346883021903!3d-34.6135460840105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334d9c2d70389%3A0xe7b5e9ee316678f!2sPuerto%20Madero%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1697830127469!5m2!1ses-419!2sar', 'imagenes/establecimiento_cine_complejos2.jpeg'),
+(3, 'Lomas de Zamora', 'Formosa 653 Lomas de zamora, (Shopping Lomas)', '<p>Este complejo está ubicado en Lomas de zamora</p>\r\n\r\n                    <p>Este complejo de 6 salas se complementa excelentemente bien con los locales comerciales y\r\n                        especialmente gastronómicos del Shopping Lomas, dentro del cual se encuentra funcionando,\r\n                        brindando al espectador la posibilidad de disfrutar de una salida completa dentro del mismo\r\n                        ámbito.</p>\r\n\r\n                    <p>Es de destacar que todas las salas poseen la mejor tecnología de proyección, sonido digital y\r\n                        salas con proyección digital 2D y 3D.</p>\r\n\r\n                    <p\">En septiembre de 2019 Cine en cartelera Lomas de zamora instaló en\r\n                        su sala N°1 el primer proyector de\r\n                        cine en\r\n                        Argentina con tecnología Láser 4K RGB. Un sistema que ofrece mejor definición a la experiencia\r\n                        visual, una innovación en la industria del cine argentino. Recomendación especial para los\r\n                        espectadores que buscan nuevas experiencias y sensaciones, esta sala le ofrece al cliente\r\n                        calidad de proyección única que a la fecha no existe en el país. Hoy no todos los films poseen\r\n                        calidad necesaria para exhibirse en Láser 4K, se espera únicamente para los estrenos\r\n                        importantes. La primera película exhibida en este formato fue “Guasón” con fecha de estreno 3 de\r\n                        octubre de 2019.</p>', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104884.38524498683!2d-58.56749999688322!3d-34.764734926213805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd261abf8fb75%3A0xd3b4119f62723032!2sLomas%20de%20Zamora%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1697830055879!5m2!1ses-419!2sar', 'imagenes/establecimiento_cine_complejos3.jpeg');
 
 -- --------------------------------------------------------
 
@@ -381,6 +385,26 @@ INSERT INTO `sala` (`id_sala`, `cant_asientos`, `estado_disponible`, `id_complej
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `sala_precio`
+--
+
+CREATE TABLE `sala_precio` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(500) NOT NULL,
+  `precio` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `sala_precio`
+--
+
+INSERT INTO `sala_precio` (`id`, `nombre`, `precio`) VALUES
+(1, '2D', 1500),
+(2, '3D', 3000);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tipo_usuario`
 --
 
@@ -532,6 +556,12 @@ ALTER TABLE `sala`
   ADD KEY `id_complejo` (`id_complejo`);
 
 --
+-- Indices de la tabla `sala_precio`
+--
+ALTER TABLE `sala_precio`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
@@ -633,6 +663,12 @@ ALTER TABLE `rol_permisos`
 --
 ALTER TABLE `sala`
   MODIFY `id_sala` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT de la tabla `sala_precio`
+--
+ALTER TABLE `sala_precio`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_usuario`
