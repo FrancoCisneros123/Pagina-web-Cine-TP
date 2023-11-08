@@ -55,9 +55,7 @@
                     <b>COMPLEJO</b>
                     <select class="form-select" aria-label="Default select example" required>
                         <option selected>Selecciona una opcion</option>
-                        <option value="Canning">Canning</option>
-                        <option value="Lomas de zamora">Lomas de zamora</option>
-                        <option value="Puerto madero">Puerto madero</option>
+                        <?php echo require_once "cargarListaComplejosOpciones.php" ?>
                     </select>
 
                     <b>ASUNTO</b>

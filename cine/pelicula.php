@@ -43,13 +43,10 @@
                             Seleccione un complejo:
                             <select class="form-select" name="" id="">
                                 <option value="">--Seleccione un opción--</option>
-                                <option value="">Canning</option>
-                                <option value="">Madero</option>
-                                <option value="">Lomas</option>
+                                <?php echo require_once "cargarListaComplejosOpciones.php" ?>
                             </select>
                         </div>
                         <div>
-
 
                             Seleccione el formato:
                             <select class="form-select" name="" id="">
