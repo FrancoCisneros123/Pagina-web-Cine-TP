@@ -33,7 +33,7 @@
                     class="img-fluid rounded mx-auto d-block">
             </div>
             <div>
-                <form action="sala.html">
+                <form action="sala.php">
                     <br>
                     <h1 id="titulo">
                         <?php echo $datos["nombre_pelicula"] ?>
