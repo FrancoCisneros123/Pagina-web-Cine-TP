@@ -1,21 +1,16 @@
-<?php
-require 'registrarsebd.php';
-$objregistrarsebd = new registrarsebd;
-
-$objregistrarsebd->registrarUsuariobd();
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineEnCartelera - Registrarse</title>
+    <title>CineEnCartelera - Registrar gerente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos_inicio_de_sesion.css">
+
+    <link rel="stylesheet" href="../css/estilos_inicio_de_sesion.css">
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
@@ -30,22 +25,23 @@ $objregistrarsebd->registrarUsuariobd();
 
 <body>
     <div class="form-informacion" style="background-color: white">
-        <h2>Registrarse</h2>
-        <p>Complete los campos a continuacion para crear una cuenta</p>
+        <h2>REGISTRAR GERENTE</h2>
+        <p>Complete los campos a continuacion para crear una cuenta de tipo gerente, recuerde que este usuario podra
+            hacer cambios importantes en el sistema.</p>
         <?php
-                if ($objregistrarsebd->blAlert) {
-                    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">';
-                    echo 'Usuario registrado correctamente';
-                    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-                    echo '</div>';
-                }
-                if ($objregistrarsebd->blAlertError) {
-                    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';                            
-                    echo 'Hubo un error: ' . $objregistrarsebd->lastError;
-                    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-                    echo '</div>';
-                }
-                ?>
+        if (count($arrErrores) > 0) {
+            echo "<div class='alert alert-danger'>Se han detectado errores:</br>";
+            foreach ($arrErrores as $strCampo => $strError) {
+                echo "<strong>" . $strCampo . "</strong>" . ": " . $strError . "</br>";
+            }
+            echo "</div>";
+        }
+        if($registro_insertado){
+            echo '<div class="alert alert-success" role="alert">
+            Usuario registrado con exito.
+          </div>';
+        }
+        ?>
         <form class="formulario" action="" method="post">
             <div class="container">
                 <div class="row">
@@ -57,14 +53,15 @@ $objregistrarsebd->registrarUsuariobd();
                     </div>
                     <div class="col-12 col-sm-6">
                         <b>EMAIL:</b>
-                        <input type="email" class="form-control" id="floatingInput" name="email" placeholder="nombre@ejemplo.com"
-                            required>
+                        <input type="email" class="form-control" id="floatingInput" name="email"
+                            placeholder="nombre@ejemplo.com" required>
                         <b>CONTRASEÑA:</b>
                         <input type="password" class="form-control" id="floatingPassword" name="contrasena" required>
                     </div>
                     <div class="col-12 col-sm-6">
                         <b>CONFIRMAR CONTRASEÑA:</b>
-                        <input type="password" class="form-control" id="floatingPassword" name="confirmarcontrasena" required>
+                        <input type="password" class="form-control" id="floatingPassword" name="confirmarcontrasena"
+                            required>
                         <b>FECHA DE NACIMIENTO: </b>
                         <input type="date" id="birthday" name="nacimiento" required>
                     </div>
@@ -81,7 +78,7 @@ $objregistrarsebd->registrarUsuariobd();
                         <input type="number" class="form-control" id="floatingPassword" name="celular" required>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button class="btn btn-primary" type="submit" name="registrarse" >Crear cuenta</button>
+                        <button class="btn btn-primary" type="submit" name="registrarse">Crear cuenta</button>
                     </div>
                 </div>
             </div>
