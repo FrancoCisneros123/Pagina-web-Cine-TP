@@ -23,7 +23,7 @@
 
 <body>
 
-<?php require_once "barra_navegacion.html"; ?>
+    <?php require_once "barra_navegacion.php"; ?>
 
     <div class="container" id="informacion">
         <div class="row">
@@ -116,6 +116,6 @@
 
     </div>
 
-    <?php require_once "footer.html"; ?>
+    <?php require_once "footer.php"; ?>
 
 </body>
