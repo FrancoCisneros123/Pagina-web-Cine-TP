@@ -36,17 +36,7 @@
         <div class="col-xs-12 col-md-6 col-lg-3">
             <p class="h5 mb-5">COMPLEJOS</p>
 
-            <div class="mb-2">
-                <a class="text-secondary text-decoration-none" href="complejo_canning.php">Canning</a>
-            </div>
-
-            <div class="mb-2">
-                <a class="text-secondary text-decoration-none" href="complejo_puerto.php">Madero</a>
-            </div>
-
-            <div class="mb-2">
-                <a class="text-secondary text-decoration-none" href="complejo_lomas.php">Lomas de zamora</a>
-            </div>
+            <?php require_once "cargarListaComplejosFooter.php"; ?>
 
         </div>
 

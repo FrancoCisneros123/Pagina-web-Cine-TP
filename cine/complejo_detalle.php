@@ -1,3 +1,5 @@
+<?php require_once "cargarDatosComplejo.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,26 +28,13 @@
         <?php require_once "barra_navegacion.php"; ?>
 
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 style="margin-top: 30px;">Nuestros complejos</h2>
-                </div>
-            </div>
 
             <div class="row">
                 <div class="col">
-                    <p>Cine en cartelera posee complejos en Canning (Ezeiza), Lomas de zamora y Puerto madero, las
-                        compras se realizan de manera online y podras retirar los boletos en la boleteria de cualquier
-                        establecimiento.</p>
-                    <p>Los horarios son de lunes a domingo desde las 8:00hs a 23:59hs</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <h4>Complejo Lomas de zamora</h4>
+                    <h4> Complejo <?php echo $datos["nombre_complejo"] ?> </h4>
                     <b>Dirección: </b>
-                    <p>Formosa 653 Lomas de zamora, (Shopping Lomas)</p>
+                    <p> <?php echo $datos["direccion"] ?> </p>
+
                     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
@@ -77,30 +66,12 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <p style="margin-top: 20px;">Este complejo está ubicado en Lomas de zamora</p>
+                    
+                    <p class="mt-5 mb-5"> <?php echo  $datos["descripcion"]   ?> </p>
 
-                    <p>Este complejo de 6 salas se complementa excelentemente bien con los locales comerciales y
-                        especialmente gastronómicos del Shopping Lomas, dentro del cual se encuentra funcionando,
-                        brindando al espectador la posibilidad de disfrutar de una salida completa dentro del mismo
-                        ámbito.</p>
-
-                    <p>Es de destacar que todas las salas poseen la mejor tecnología de proyección, sonido digital y
-                        salas con proyección digital 2D y 3D.</p>
-
-                    <p style="margin-bottom: 60px;">En septiembre de 2019 Cine en cartelera Lomas de zamora instaló en
-                        su sala N°1 el primer proyector de
-                        cine en
-                        Argentina con tecnología Láser 4K RGB. Un sistema que ofrece mejor definición a la experiencia
-                        visual, una innovación en la industria del cine argentino. Recomendación especial para los
-                        espectadores que buscan nuevas experiencias y sensaciones, esta sala le ofrece al cliente
-                        calidad de proyección única que a la fecha no existe en el país. Hoy no todos los films poseen
-                        calidad necesaria para exhibirse en Láser 4K, se espera únicamente para los estrenos
-                        importantes. La primera película exhibida en este formato fue “Guasón” con fecha de estreno 3 de
-                        octubre de 2019.</p>
-                </div>
                 <iframe style="margin-bottom: 30px;"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104884.38524498683!2d-58.56749999688322!3d-34.764734926213805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd261abf8fb75%3A0xd3b4119f62723032!2sLomas%20de%20Zamora%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1697830055879!5m2!1ses-419!2sar"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    src=<?php echo $datos["direccion_maps"] ?>
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 

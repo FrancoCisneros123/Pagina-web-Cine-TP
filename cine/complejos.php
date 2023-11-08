@@ -42,47 +42,7 @@
             </div>
 
             <div class="row">
-                <div class="col-6">
-                    <div class="card card-individual">
-                        <img src="imagenes/establecimiento_cine_complejos3.jpeg" class="card-img-top" alt="...">
-                        <a href="complejo_canning.html" class="stretched-link"></a>
-
-                        <div class="card-body" style="background-color: black; color: white;">
-                            <h5 class="card-title">CANNING</h5>
-                            <a href="complejo_canning.html" class="stretched-link"></a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-6">
-                    <div class="card card-individual">
-                        <img src="imagenes/establecimiento_cine_complejos.jpeg" class="card-img-top" alt="...">
-                        <a href="complejo_lomas.html" class="stretched-link"></a>
-
-                        <div class="card-body" style="background-color: black">
-                            <h5 class="card-title" style="color: white;">LOMAS DE ZAMORA</h5>
-                            <a href="complejo_lomas.html" class="stretched-link"></a>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="col-6">
-                    <div class="card card-individual">
-                        <img src="imagenes/establecimiento_cine_complejos2.jpeg" class="card-img-top" alt="...">
-                        <a href="complejo_puerto.html" class="stretched-link"></a>
-
-                        <div class="card-body" style="background-color: black">
-                            <h5 class="card-title" style="color: white">PUERTO MADERO</h5>
-                            <a href="complejo_puerto.html" class="stretched-link"></a>
-                        </div>
-
-                    </div>
-                </div>
-
-
+                <?php require_once "cargarListaComplejos.php"; ?>
             </div>
         </div>
     </div>
