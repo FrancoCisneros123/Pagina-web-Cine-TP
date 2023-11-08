@@ -48,14 +48,9 @@
                     <td><b>SALA</td>
                     <td><b>PRECIO</b></td>
                 </tr>
-                <tr>
-                    <td>2D</td>
-                    <td>$1.500</td>
-                </tr>
-                <tr>
-                    <td>3D</td>
-                    <td>$3.000</td>
-                </tr>
+
+                <?php require_once "cargarSalaPrecio.php"; ?>
+
             </table>
 
             <p>La compra de entradas de cine de Cine en cartelera, a través del siguiente sitio web
