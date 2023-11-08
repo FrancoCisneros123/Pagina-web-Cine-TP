@@ -88,6 +88,14 @@ body{ /*Todo el body por completo es negro*/
     margin-bottom: 20px;
 }
 
+#inicar-sesion {
+    margin-left: 20px;
+}
+
+#imagen-pelicula {
+    margin-left: 40%;
+}
+
 #cerrar-sesion {
     margin-left: 10px;
 }
