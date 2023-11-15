@@ -36,23 +36,15 @@
 
                 <!--parte izquierda con sus asientos-->
                 <div class="col-12 col-xs-6 col-md-6 col-lg-6 ">
-                    <div class="cine-asientos izquierda">
-                        <div class="cine-fila fila-1" id="fila-izquierda-1"></div>
-                        <div class="cine-fila fila-2" id="fila-izquierda-2"></div>
-                        <div class="cine-fila fila-3" id="fila-izquierda-3"></div>
-                        <div class="cine-fila fila-4" id="fila-izquierda-4"></div>
-                        <div class="cine-fila fila-5" id="fila-izquierda-5"></div>
+                    <div class="cine-asientos izquierda"> 
+                        <?php require_once "generarSalaFilaIzquierda.php" ?>
                     </div>
                 </div>
 
                 <!--parte derecha con sus asientos-->
                 <div class="col-12 col-xs-6 col-md-6 col-lg-6">
                     <div class="cine-asientos derecha">
-                        <div class="cine-fila fila-1" id="fila-derecha-1"></div>
-                        <div class="cine-fila fila-2" id="fila-derecha-2"></div>
-                        <div class="cine-fila fila-3" id="fila-derecha-3"></div>
-                        <div class="cine-fila fila-4" id="fila-derecha-4"></div>
-                        <div class="cine-fila fila-5" id="fila-derecha-5"></div>
+                       <?php require_once "generarSalaFilaDerecha.php" ?>
                     </div>
                 </div>
 
