@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="css/estilo_container_padding.css">
 
+    <script src="js/script_footer.js" defer></script>
 </head>
 
 <body>
@@ -34,9 +35,13 @@
 
             <div class="row">
                 <div class="col">
-                    <h4> Complejo <?php echo $datos["nombre_complejo"] ?> </h4>
+                    <h4> Complejo
+                        <?php echo $datos["nombre_complejo"] ?>
+                    </h4>
                     <b>Dirección: </b>
-                    <p> <?php echo $datos["direccion"] ?> </p>
+                    <p>
+                        <?php echo $datos["direccion"] ?>
+                    </p>
 
                     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -70,11 +75,12 @@
                         </button>
                     </div>
 
-                    <p class="mt-5 mb-5"> <?php echo  $datos["descripcion"]   ?> </p>
+                    <p class="mt-5 mb-5">
+                        <?php echo $datos["descripcion"] ?>
+                    </p>
 
-                    <iframe style="margin-bottom: 30px;" 
-                    src=<?php echo $datos["direccion_maps"] ?> 
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    <iframe style="margin-bottom: 30px;" src=<?php echo $datos["direccion_maps"] ?> width="100%"
+                        height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 

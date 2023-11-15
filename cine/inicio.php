@@ -30,6 +30,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
     <link rel="stylesheet" href="css/estilo_container_padding.css">
     <script src="js/script_inicio.js" defer></script>
 
+    <script src="js/script_footer.js" defer></script>
 </head>
 
 <body>

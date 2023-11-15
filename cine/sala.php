@@ -18,6 +18,7 @@
         rel="stylesheet">
 
     <script src="js/script_sala.js" defer></script>
+    <script src="js/script_footer.js" defer></script>
 </head>
 
 <body>
@@ -44,7 +45,7 @@
                     <div class="cine-asientos derecha" id="cine-asientos-derecha"></div>
                 </div>
 
-            </div> 
+            </div>
 
         </div>
 
