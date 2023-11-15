@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/estilo_peliculaInfo.css">
+    <script src="js/script_barra_navegacion.js" defer></script>
     <script src="js/script_footer.js" defer></script>
 </head>
 

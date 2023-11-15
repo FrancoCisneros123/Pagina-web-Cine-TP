@@ -10,20 +10,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="MenuNavegacion" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="inicio.php">CARTELERA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="complejos.php">COMPLEJOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="precios.php">PRECIOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.php">CONTACTO</a>
-                    </li>
+
+                <!--opciones-->
+                <ul class="navbar-nav ms-3" id="barra_navegacion_lista">
                 </ul>
+                
                 <ul class="navbar-nav ms-auto">
                     <!--etiqueta de boostrap 5 que coloca elementos en el lugar derecho (en este caso la lupa)-->
                     <li class="nav-item" id="busqueda">

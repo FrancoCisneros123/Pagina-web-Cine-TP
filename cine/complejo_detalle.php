@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="css/estilo_container_padding.css">
 
+    <script src="js/script_barra_navegacion.js" defer></script>
     <script src="js/script_footer.js" defer></script>
 </head>
 

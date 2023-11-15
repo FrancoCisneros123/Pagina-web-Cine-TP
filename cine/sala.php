@@ -18,6 +18,7 @@
         rel="stylesheet">
 
     <script src="js/script_sala.js" defer></script>
+    <script src="js/script_barra_navegacion.js" defer></script>
     <script src="js/script_footer.js" defer></script>
 </head>
 
