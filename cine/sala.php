@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <script src="js/script_sala.js"></script>
+    <script src="js/script_sala.js" defer></script>
 </head>
 
 <body>
@@ -36,19 +36,15 @@
 
                 <!--parte izquierda con sus asientos-->
                 <div class="col-12 col-xs-6 col-md-6 col-lg-6 ">
-                    <div class="cine-asientos izquierda"> 
-                        <?php require_once "generarSalaFilaIzquierda.php" ?>
-                    </div>
+                    <div class="cine-asientos izquierda" id="cine-asientos-izquierda"></div>
                 </div>
 
                 <!--parte derecha con sus asientos-->
                 <div class="col-12 col-xs-6 col-md-6 col-lg-6">
-                    <div class="cine-asientos derecha">
-                       <?php require_once "generarSalaFilaDerecha.php" ?>
-                    </div>
+                    <div class="cine-asientos derecha" id="cine-asientos-derecha"></div>
                 </div>
 
-            </div>
+            </div> 
 
         </div>
 

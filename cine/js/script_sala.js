@@ -2,11 +2,45 @@ let asientoNumero = 1;
 let asientosMaximos = 0;
 let cantidadFilas = 7;
 let cantidadAsientos = 6;
+let cineAsientosIzquierda = document.getElementById("cine-asientos-izquierda");
+let cineAsientosDerecha = document.getElementById("cine-asientos-derecha");
 
 window.addEventListener("load", () => {
-    crearFilaAsientos();
-    cargarAsientosReservaOpciones();
+    cargarAsientosIzquierda();
+    cargarAsientosDerecha();
 })
+
+function cargarAsientosIzquierda()
+{
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function()
+    {
+        if (xhttp.readyState === 4 && xhttp.status === 200)
+            cineAsientosIzquierda.innerHTML = xhttp.responseText;
+    }
+
+    xhttp.open("get","generarSalaFila.php?fila=izquierda");
+    xhttp.send();
+}
+
+function cargarAsientosDerecha()
+{
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function()
+    {
+        if (xhttp.readyState === 4 && xhttp.status === 200)
+        {
+            cineAsientosDerecha.innerHTML = xhttp.responseText;
+            crearFilaAsientos();
+            cargarAsientosReservaOpciones();
+        } 
+    }
+
+    xhttp.open("get","generarSalaFila.php?fila=derecha");
+    xhttp.send();
+}
 
 function crearFilaAsientos() {
     for (let i = 0; i < cantidadFilas; i++)
