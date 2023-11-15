@@ -29,6 +29,11 @@ body{ /*Todo el body por completo es negro*/
     cursor: pointer;
 }
 
+/*tamaño del imagen de las peliculas*/
+.card-img-top {
+    height: 300px;
+}
+
 .card-individual:hover {
     transform: scale(1.09);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.488);
