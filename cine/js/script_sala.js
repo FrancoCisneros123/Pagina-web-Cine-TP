@@ -1,110 +1,103 @@
 let asientoNumero = 1;
 let asientosMaximos = 0;
+let cantidadFilas = 7;
+let cantidadAsientos = 6;
+let cineAsientosIzquierda = document.getElementById("cine-asientos-izquierda");
+let cineAsientosDerecha = document.getElementById("cine-asientos-derecha");
+
+window.addEventListener("load", () => {
+    cargarAsientosIzquierda();
+    cargarAsientosDerecha();
+})
+
+function cargarAsientosIzquierda()
+{
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function()
+    {
+        if (xhttp.readyState === 4 && xhttp.status === 200)
+            cineAsientosIzquierda.innerHTML = xhttp.responseText;
+    }
+
+    xhttp.open("get","generarSalaFila.php?fila=izquierda");
+    xhttp.send();
+}
+
+function cargarAsientosDerecha()
+{
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function()
+    {
+        if (xhttp.readyState === 4 && xhttp.status === 200)
+        {
+            cineAsientosDerecha.innerHTML = xhttp.responseText;
+            crearFilaAsientos();
+            cargarAsientosReservaOpciones();
+        } 
+    }
+
+    xhttp.open("get","generarSalaFila.php?fila=derecha");
+    xhttp.send();
+}
+
+function crearFilaAsientos() {
+    for (let i = 0; i < cantidadFilas; i++)
+        crearAsientos();
+}
 
 function crearAsientos() {
-    //creo asientos como elementos div
-    let asiento_fila_izquierda_1 = document.createElement("div");
-    let asiento_fila_izquierda_2 = document.createElement("div");
-    let asiento_fila_izquierda_3 = document.createElement("div");
-    let asiento_fila_izquierda_4 = document.createElement("div");
-    let asiento_fila_izquierda_5 = document.createElement("div");
 
-    let asiento_fila_derecha_1 = document.createElement("div");
-    let asiento_fila_derecha_2 = document.createElement("div");
-    let asiento_fila_derecha_3 = document.createElement("div");
-    let asiento_fila_derecha_4 = document.createElement("div");
-    let asiento_fila_derecha_5 = document.createElement("div");
+    let asiento_fila_izquierda = [];
+    let asiento_fila_derecha = [];
+    let fila_izquierda = [];
+    let fila_derecha = [];
 
-    //le agrego la clase de asientos para que tomen los estilos
-    asiento_fila_izquierda_1.className = "asiento";
-    asiento_fila_izquierda_2.className = "asiento";
-    asiento_fila_izquierda_3.className = "asiento";
-    asiento_fila_izquierda_4.className = "asiento";
-    asiento_fila_izquierda_5.className = "asiento";
+    //izquierda
+       for(let i = 1; i < cantidadAsientos; i++)
+    {
+        //creo asientos como elementos div
+        asiento_fila_izquierda[i] = document.createElement("div");
 
-    asiento_fila_derecha_1.className = "asiento";
-    asiento_fila_derecha_2.className = "asiento";
-    asiento_fila_derecha_3.className = "asiento";
-    asiento_fila_derecha_4.className = "asiento";
-    asiento_fila_derecha_5.className = "asiento";
+        //le agrego la clase de asientos para que tomen los estilos
+        asiento_fila_izquierda[i].className = "asiento";
 
-    //le agrego el numero a cada asiento 
-    asiento_fila_izquierda_1.innerHTML = asientoNumero;
-    asiento_fila_izquierda_1.setAttribute("id", asientoNumero);
-    asientoNumero++;
+        //le agrego el numero a cada asiento 
+        asiento_fila_izquierda[i].innerHTML = asientoNumero;
+        asiento_fila_izquierda[i].setAttribute("id", asientoNumero);
+        asientoNumero++;
 
-    asiento_fila_izquierda_2.innerHTML = asientoNumero;
-    asiento_fila_izquierda_2.setAttribute("id", asientoNumero);
-    asientoNumero++;
+        //obtengo las filas por id
+        fila_izquierda[i] = document.getElementById("fila-izquierda-" + i);
 
-    asiento_fila_izquierda_3.innerHTML = asientoNumero;
-    asiento_fila_izquierda_3.setAttribute("id", asientoNumero);
-    asientoNumero++;
+        //le agrego los asientos
+        fila_izquierda[i].appendChild(asiento_fila_izquierda[i]);
+    }
 
-    asiento_fila_izquierda_4.innerHTML = asientoNumero;
-    asiento_fila_izquierda_4.setAttribute("id", asientoNumero);
-    asientoNumero++;
+    //derecha
+    for(let i = 1; i < cantidadAsientos; i++)
+    {
+        asiento_fila_derecha[i] = document.createElement("div");
 
-    asiento_fila_izquierda_5.innerHTML = asientoNumero;
-    asiento_fila_izquierda_5.setAttribute("id", asientoNumero);
-    asientoNumero++;
+        asiento_fila_derecha[i].className = "asiento";
 
-    asiento_fila_derecha_1.innerHTML = asientoNumero;
-    asiento_fila_derecha_1.setAttribute("id", asientoNumero);
-    asientoNumero++;
+        asiento_fila_derecha[i].innerHTML = asientoNumero;
+        asiento_fila_derecha[i].setAttribute("id", asientoNumero);
+        asientoNumero++;
 
-    asiento_fila_derecha_2.innerHTML = asientoNumero;
-    asiento_fila_derecha_2.setAttribute("id", asientoNumero);
-    asientoNumero++;
+        fila_derecha[i] = document.getElementById("fila-derecha-" + i);
 
-    asiento_fila_derecha_3.innerHTML = asientoNumero;
-    asiento_fila_derecha_3.setAttribute("id", asientoNumero);
-    asientoNumero++;
+        fila_derecha[i].appendChild(asiento_fila_derecha[i]);
+    }
 
-    asiento_fila_derecha_4.innerHTML = asientoNumero;
-    asiento_fila_derecha_4.setAttribute("id", asientoNumero);
-    asientoNumero++;
-
-    asiento_fila_derecha_5.innerHTML = asientoNumero;
-    asiento_fila_derecha_5.setAttribute("id", asientoNumero);
-    asientoNumero++;
-
-    let fila_izquierda_1 = document.getElementById("fila-izquierda-1");
-    let fila_izquierda_2 = document.getElementById("fila-izquierda-2");
-    let fila_izquierda_3 = document.getElementById("fila-izquierda-3");
-    let fila_izquierda_4 = document.getElementById("fila-izquierda-4");
-    let fila_izquierda_5 = document.getElementById("fila-izquierda-5");
-
-    let fila_derecha_1 = document.getElementById("fila-derecha-1");
-    let fila_derecha_2 = document.getElementById("fila-derecha-2");
-    let fila_derecha_3 = document.getElementById("fila-derecha-3");
-    let fila_derecha_4 = document.getElementById("fila-derecha-4");
-    let fila_derecha_5 = document.getElementById("fila-derecha-5");
-
-    //agrego los asientos a cada fila
-    fila_izquierda_1.appendChild(asiento_fila_izquierda_1);
-    fila_izquierda_2.appendChild(asiento_fila_izquierda_2);
-    fila_izquierda_3.appendChild(asiento_fila_izquierda_3);
-    fila_izquierda_4.appendChild(asiento_fila_izquierda_4);
-    fila_izquierda_5.appendChild(asiento_fila_izquierda_5);
-
-    fila_derecha_1.appendChild(asiento_fila_derecha_1);
-    fila_derecha_2.appendChild(asiento_fila_derecha_2);
-    fila_derecha_3.appendChild(asiento_fila_derecha_3);
-    fila_derecha_4.appendChild(asiento_fila_derecha_4);
-    fila_derecha_5.appendChild(asiento_fila_derecha_5);
-
+    //aumento la cantidad maxima para las opciones del select
     if (asientoNumero > asientosMaximos)
         asientosMaximos = asientoNumero
 }
 
-function crearFilaAsientos() {
-    for (let i = 0; i < 7; i++)
-        crearAsientos();
-}
-
-/*cargo las opciones de los asientos*/
-function cargarAsientosOpciones() {
+/*cargo las opciones de los asientos del select*/
+function cargarAsientosReservaOpciones() {
 
     for (let i = 1; i < asientosMaximos; i++) {
         let opcion = document.createElement("option");
@@ -116,8 +109,3 @@ function cargarAsientosOpciones() {
         document.getElementById("dropdownAsiento").appendChild(opcion);
     }
 }
-
-window.addEventListener("load", () => {
-    crearFilaAsientos();
-    cargarAsientosOpciones();
-})

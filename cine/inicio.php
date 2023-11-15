@@ -26,10 +26,16 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilo_container_padding.css">
+    <script src="js/script_inicio.js" defer></script>
+
+    <script src="js/script_barra_navegacion.js" defer></script>
+    <script src="js/script_footer.js" defer></script>
 </head>
 
 <body>
-    <div class="container-fluid" style="padding: 0%;">
+    <div class="container-fluid" id="container-padding">
 
         <!--barra de navegacion-->
         <?php require_once "barra_navegacion.php"; ?>
@@ -46,11 +52,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
 
         <!--cards-->
         <div class="container">
-
-            <div class="row">
-                <?php require_once "cargar_cartelera_peliculas.php"; ?>
-            </div>
-
+            <div class="row" id="peliculas"></div>
         </div>
 
     </div>
@@ -68,9 +70,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
             </div>
         </div>
 
-        <div class="row">
-            <?php require_once "cargar_cartelera_estrenos.php"; ?>
-        </div>
+        <div class="row" id="estrenos"></div>
 
     </div>
 

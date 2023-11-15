@@ -29,6 +29,17 @@ body{ /*Todo el body por completo es negro*/
     cursor: pointer;
 }
 
+/*tamaño del imagen de las peliculas*/
+.imagen-peliculas {
+    height: 300px;
+}
+
+/*tamaño del imagen de los estrenos*/
+
+.imagen-estrenos {
+    height: 700px;
+}
+
 .card-individual:hover {
     transform: scale(1.09);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.488);
