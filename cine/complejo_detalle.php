@@ -19,10 +19,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilo_container_padding.css">
+
 </head>
 
 <body>
-    <div class="container-fluid" style="padding: 0%;">
+    <div class="container-fluid" id="container-padding">
 
         <!--barra de navegacion-->
         <?php require_once "barra_navegacion.php"; ?>
@@ -66,22 +69,22 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    
+
                     <p class="mt-5 mb-5"> <?php echo  $datos["descripcion"]   ?> </p>
 
-                <iframe style="margin-bottom: 30px;"
-                    src=<?php echo $datos["direccion_maps"] ?>
+                    <iframe style="margin-bottom: 30px;" 
+                    src=<?php echo $datos["direccion_maps"] ?> 
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
             </div>
 
+            <!--footer-->
+            <?php require_once "footer.php"; ?>
 
         </div>
-
-        <!--footer-->
-        <?php require_once "footer.php"; ?>
-
-    </div>
 
 </body>
 
