@@ -2,7 +2,7 @@
 
 require_once "conexion.php";
 
-$sql = $conn->query("SELECT id_pelicula, nombre_imagen FROM pelicula WHERE esEstreno='si'");
+$sql = $conn->query("SELECT id_pelicula, nombre_pelicula, nombre_imagen FROM pelicula WHERE esEstreno='si'");
 
 while ($datos = $sql->fetch()) {
     echo "
@@ -12,7 +12,7 @@ while ($datos = $sql->fetch()) {
                     <img src='" . $datos["nombre_imagen"] . "' class='card-img-top'>
 
                     <div class='card-body'>
-                        <h5 class='card-title'>EL JUSTICIERO 3</h5>
+                        <h5 class='card-title'>" . $datos["nombre_pelicula"] . "</h5>
                         <a href='#' class='stretched-link'></a>
                     </div>
 
