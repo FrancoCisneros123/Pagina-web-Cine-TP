@@ -30,8 +30,14 @@ body{ /*Todo el body por completo es negro*/
 }
 
 /*tamaño del imagen de las peliculas*/
-.card-img-top {
+.imagen-peliculas {
     height: 300px;
+}
+
+/*tamaño del imagen de los estrenos*/
+
+.imagen-estrenos {
+    height: 700px;
 }
 
 .card-individual:hover {
