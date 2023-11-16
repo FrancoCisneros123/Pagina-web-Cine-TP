@@ -6,41 +6,9 @@ let cineAsientosIzquierda = document.getElementById("cine-asientos-izquierda");
 let cineAsientosDerecha = document.getElementById("cine-asientos-derecha");
 
 window.addEventListener("load", () => {
-    cargarAsientosIzquierda();
-    cargarAsientosDerecha();
+    crearFilaAsientos();
+    cargarAsientosReservaOpciones();
 })
-
-function cargarAsientosIzquierda()
-{
-    let xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function()
-    {
-        if (xhttp.readyState === 4 && xhttp.status === 200)
-            cineAsientosIzquierda.innerHTML = xhttp.responseText;
-    }
-
-    xhttp.open("get","generarSalaFila.php?fila=izquierda");
-    xhttp.send();
-}
-
-function cargarAsientosDerecha()
-{
-    let xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function()
-    {
-        if (xhttp.readyState === 4 && xhttp.status === 200)
-        {
-            cineAsientosDerecha.innerHTML = xhttp.responseText;
-            crearFilaAsientos();
-            cargarAsientosReservaOpciones();
-        } 
-    }
-
-    xhttp.open("get","generarSalaFila.php?fila=derecha");
-    xhttp.send();
-}
 
 function crearFilaAsientos() {
     for (let i = 0; i < cantidadFilas; i++)

@@ -38,12 +38,16 @@
 
                 <!--parte izquierda con sus asientos-->
                 <div class="col-12 col-xs-6 col-md-6 col-lg-6 ">
-                    <div class="cine-asientos izquierda" id="cine-asientos-izquierda"></div>
+                    <div class="cine-asientos izquierda" id="cine-asientos-izquierda">
+                        <?php include "generarSalaFilaIzquierda.php" ?>;
+                    </div>
                 </div>
 
                 <!--parte derecha con sus asientos-->
                 <div class="col-12 col-xs-6 col-md-6 col-lg-6">
-                    <div class="cine-asientos derecha" id="cine-asientos-derecha"></div>
+                    <div class="cine-asientos derecha" id="cine-asientos-derecha">
+                        <?php include "generarSalaFilaDerecha.php" ?>;
+                    </div>
                 </div>
 
             </div>
