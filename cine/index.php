@@ -84,6 +84,7 @@ if (isset($_SESSION["emailLogin"])){ //si ya ingreso, lo redirigimos a inicio, n
         rel="stylesheet">
 
     <!-- <script src="js/script_inicio_de_sesion.js" async></script> -->
+     <script src="js/script_inicio_de_sesion_clave.js" defer></script> 
 </head>
 
 <body>
@@ -106,9 +107,9 @@ if (isset($_SESSION["emailLogin"])){ //si ya ingreso, lo redirigimos a inicio, n
 
             <div class="form-floating mb-3">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="mostrarContrasenia">
+                    <input class="form-check-input" type="checkbox" value="" id="mostrarClave">
 
-                    <label class="form-check-label" for="mostrarContrasenia">
+                    <label class="form-check-label" for="mostrarClave">
                         Mostrar contraseña
                     </label>
                 </div>
