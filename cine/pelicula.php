@@ -1,4 +1,7 @@
-<?php require_once "informacion_pelicula.php"; ?>
+<?php 
+session_start();
+require_once "informacion_pelicula.php"; 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,15 +38,18 @@
                     class="img-fluid rounded mx-auto d-block">
             </div>
             <div>
-                <form action="sala.php">
+                <form action="comprarBoleto.php" method="post">
                     <br>
                     <h1 id="titulo">
                         <?php echo $datos["nombre_pelicula"] ?>
                     </h1>
+
+                    <input type="hidden" name="nombre_pelicula" id="nombre_pelicula">
+
                     <div>
                         <div>
                             Seleccione un complejo:
-                            <select class="form-select" name="" id="">
+                            <select class="form-select" name="complejo" id="complejo">
                                 <option value="">--Seleccione un opción--</option>
                                 <?php echo require_once "cargarListaComplejosOpciones.php" ?>
                             </select>
@@ -51,10 +57,10 @@
                         <div>
 
                             Seleccione el formato:
-                            <select class="form-select" name="" id="">
+                            <select class="form-select" name="formato" id="formato">
                                 <option value="">--Seleccione un opción--</option>
-                                <option value="">2D</option>
-                                <option value="">3D</option>
+                                <option value="2D">2D</option>
+                                <option value="3D">3D</option>
                             </select>
                         </div>
 
@@ -62,17 +68,21 @@
 
                             Seleccione el día:
 
-                            <input class="form-control" type="date">
+                            <input class="form-control" type="date" name="dia" id="dia">
                         </div>
                         <div>
                             Seleccione el horario:
-                            <select class="form-select" name="" id="">
+                            <select class="form-select" name="horario" id="horario">
                                 <option value="">--Seleccione un opción--</option>
-                                <option value="">16:00hs</option>
-                                <option value="">20:00hs</option>
+                                <option value="16:00hs">16:00hs</option>
+                                <option value="20:00hs">20:00hs</option>
                             </select>
                         </div>
                     </div>
+
+                    <input type="hidden" name="id_pelicula" id="id_pelicula" value="<?php echo $_GET["id_pelicula"] ?>">
+                    <input type="hidden" name="nombre_imagen" id="nombre_imagen" value="<?php echo $datos["nombre_imagen"] ?>">
+                    <input type="hidden" name="nombre_pelicula" id="nombre_pelicula" value="<?php echo $datos["nombre_pelicula"] ?>">
 
                     <br><button type="submit" class="btn btn-danger">Comprar entradas</button>
                 </form>

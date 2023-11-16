@@ -1,6 +1,6 @@
-let cantidadBoletos = document.getElementById("cantidadBoletos");
-let precioUnitario = document.getElementById("precioUnitario");
-let precioCompra = document.getElementById("precioCompra");
+let cantidadBoletos = document.getElementById("cantidad_boletos");
+let precioUnitario = document.getElementById("precio_unitario");
+let precioCompra = document.getElementById("precio_compra");
 
 cantidadBoletos.addEventListener("input", ()=>
 {

@@ -1,8 +1,10 @@
-<?php require_once "informacion_pelicula.php"; 
+<?php
+session_start();
+echo $_SESSION["id_usuario"];
 
 $precio;
 
-if ($_GET["formato"] == "2D")
+if ($_POST["formato"] == "2D")
     $precio = 1500;
 else
     $precio = 2000;
@@ -45,29 +47,33 @@ else
         <div class="row">
             <div>
                 <br>
-                <img src=<?php echo $datos["nombre_imagen"] ?> width="200" alt="" id="imagen-pelicula"
+                <img src=<?php echo $_POST["nombre_imagen"] ?> width="200" alt="" id="imagen-pelicula"
                     class="img-fluid rounded mx-auto d-block">
             </div>
 
             <h2>
-                <?php echo $datos["nombre_pelicula"] ?>
+                <?php echo $_POST["nombre_pelicula"] ?>
             </h2>
 
             <div>
-                <form action="sala.php">
+                <form action="ticket.php" method="post">
                     <br>
 
-                    <label for="cantidadBoletos" class="form-label">Cantidad de boletos</label>
-                    <input type="number" name="cantidadBoletos" id="cantidadBoletos" class="form-control" min="1" max="50" value="1">
-
+                    <label for="cantidad_boletos" class="form-label">Cantidad de boletos</label>
+                    <input type="number" name="cantidad_boletos" id="cantidad_boletos" class="form-control" min="1" max="50" value="1">
                     
-                    <label for="precioUnitario" class="form-label">precio unitario</label>
-                    <input type="number" name="precioUnitario" id="precioUnitario" class="form-control" value="<?php echo $precio?>" readonly>
+                    <label for="precio_unitario" class="form-label">precio unitario</label>
+                    <input type="number" name="precio_unitario" id="precio_unitario" class="form-control" value="<?php echo $precio?>" readonly>
                     
-                    <label for="precioCompra" class="form-label">Total a pagar</label>
-                    <input type="number" name="precioCompra" id="precioCompra" class="form-control" value="<?php echo $precio ?>" readonly>
+                    <label for="precio_compra" class="form-label">Total a pagar</label>
+                    <input type="number" name="precio_compra" id="precio_compra" class="form-control" value="<?php echo $precio ?>" readonly>
 
-                    <div></div>
+                    <input type="hidden" name="complejo" id="complejo" value=<?php echo $_POST["complejo"]?>>
+                    <input type="hidden" name="formato" id="formato" value=<?php echo $_POST["formato"] ?>>
+                    <input type="hidden" name="dia" id="dia" value=<?php echo $_POST["dia"] ?>>
+                    <input type="hidden" name="horario" id="horario" value=<?php echo $_POST["horario"] ?>>
+                    <input type="hidden" name="nombre_pelicula" id="nombre_pelicula" value=<?php echo $_POST["nombre_pelicula"] ?>>
+                    <input type="hidden" name="nombre_imagen" id="nombre_imagen" value=<?php echo $_POST["nombre_imagen"] ?>>
 
                     <br><button type="submit" class="btn btn-success">Confirmar compra</button>
                 </form>
