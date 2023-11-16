@@ -14,14 +14,15 @@
                 <!--opciones-->
                 <ul class="navbar-nav ms-3" id="barra_navegacion_lista">
                 </ul>
-                
+
                 <ul class="navbar-nav ms-auto">
                     <!--etiqueta de boostrap 5 que coloca elementos en el lugar derecho (en este caso la lupa)-->
                     <li class="nav-item" id="busqueda">
-                        <form class="d-flex">
+                        <form action="busquedaIndex.php" class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Ingresa tu busqueda"
-                                aria-label="Search">
-                            <button class="btn btn-outline-warning" type="submit">Buscar</button>
+                                aria-label="Search" id="busquedaUsuario" name="busquedaUsuario">
+                            
+                            <button class="btn btn-outline-warning" type="submit" >Buscar</a>
                         </form>
                     </li>
 
