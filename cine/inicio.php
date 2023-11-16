@@ -50,7 +50,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
             </div>
         </div>
 
-        <!--cards-->
+        <!--peliculas cargadas con AJAX-->
         <div class="container">
             <div class="row" id="peliculas"></div>
         </div>
@@ -70,6 +70,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
             </div>
         </div>
 
+        <!--estrenos cargados con AJAX-->
         <div class="row" id="estrenos"></div>
 
     </div>
