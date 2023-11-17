@@ -17,8 +17,8 @@ while($datos = $query->fetch())
             <td>$datos[id_pelicula]</td>
             <td>$datos[dia]</td>
             <td>$datos[formato]</td>
-            <td><a href='editar_funcion.php?id_funcion=$datos[id_funcion]'>Editar</a></td>
-            <td><a href='eliminar_funcion.php?id_funcion=$datos[id_funcion]'>Eliminar</a></td>
+            <td><a class='btn btn-primary' href='editar_funcion.php?id_funcion=$datos[id_funcion]'>Editar</a></td>
+            <td><a class='btn btn-danger' href='eliminar_funcion.php?id_funcion=$datos[id_funcion]'>Eliminar</a></td>
         </tr>";
 }
 
