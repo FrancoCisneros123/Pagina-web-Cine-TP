@@ -25,6 +25,7 @@ if (isset($_POST["emailLogin"]) && isset($_POST["passwordLogin"])) {
     if ($result) {
         $_SESSION["emailLogin"] = $email;
         $_SESSION["id_usuario"] = $result["id_usuario"];
+        $_SESSION["id_tipo_usuario"] = $result["id_tipo_usuario"];
         header("location: inicio.php");
     } else {
         $error = "Login fallido";

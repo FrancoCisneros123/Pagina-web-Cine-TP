@@ -6,6 +6,9 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
     die(); //finalizaria la ejecucion de este script ya que el usuario no inicio sesion
 
 }
+
+require "redireccion_gerente.php";
+
 ?>
 
 <!DOCTYPE html>
