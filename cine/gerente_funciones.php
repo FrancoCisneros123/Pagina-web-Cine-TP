@@ -42,6 +42,11 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
 
         <div class="container">
 
+        <a href="gerente_funciones.php" class="btn btn-primary mt-4 mb-4">Administrar peliculas</a>
+        <a href="gerente_funciones.php" class="btn btn-primary mt-4 mb-4">Administrar funciones</a>
+
+        <h1>Listado de funciones</h1>
+
         <table class="table table-striped table-hover mt-4 mb-4 text-center">
             <thead>
                 <tr>
