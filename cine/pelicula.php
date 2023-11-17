@@ -24,6 +24,7 @@ require_once "informacion_pelicula.php";
     <link rel="stylesheet" href="css/estilo_peliculaInfo.css">
     <script src="js/script_barra_navegacion.js" defer></script>
     <script src="js/script_footer.js" defer></script>
+    <script src="js/script_pelicula.js" defer></script>
 </head>
 
 <body>
@@ -84,7 +85,7 @@ require_once "informacion_pelicula.php";
                     <input type="hidden" name="nombre_imagen" id="nombre_imagen" value="<?php echo $datos["nombre_imagen"] ?>">
                     <input type="hidden" name="nombre_pelicula" id="nombre_pelicula" value="<?php echo $datos["nombre_pelicula"] ?>">
 
-                    <br><button type="submit" class="btn btn-danger">Comprar entradas</button>
+                    <br><button type="submit" class="btn btn-danger" name="comprar" id="comprar" disabled>Comprar entradas</button>
                 </form>
             </div>
 
