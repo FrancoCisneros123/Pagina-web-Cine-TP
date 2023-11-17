@@ -100,3 +100,19 @@ body{ /*Todo el body por completo es negro*/
 #cerrar-sesion {
     margin-left: 10px;
 }
+
+/*complejo*/
+
+.card-individual-complejo {
+    margin: 20px 30px 10px 30px;
+    padding: 0%;
+    text-align: justify;
+    transition: .2s;
+    cursor: pointer;
+    height: 450px;
+}
+
+.card-individual-complejo:hover {
+    transform: scale(1.09);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.488);
+}

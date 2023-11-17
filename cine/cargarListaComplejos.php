@@ -7,7 +7,7 @@ $sql = $conn->query("SELECT id_complejo, nombre_complejo, nombre_imagen FROM com
 while ($datos = $sql->fetch()) {
     echo "  
     <div class='col-6'>
-        <div class='card card-individual'>
+        <div class='card card-individual-complejo'>
             <img src=" . $datos["nombre_imagen"] . " class='card-img-top'>
 
             <div class='card-body' style='background-color: black'>
