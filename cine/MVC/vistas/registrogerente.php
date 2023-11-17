@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <div class="form-informacion" style="background-color: white">
+    <div class="form-informacion">
         <h2>REGISTRAR GERENTE</h2>
         <p>Complete los campos a continuacion para crear una cuenta de tipo gerente, recuerde que este usuario podra
             hacer cambios importantes en el sistema.</p>

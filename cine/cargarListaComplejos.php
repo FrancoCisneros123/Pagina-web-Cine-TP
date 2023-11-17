@@ -10,8 +10,8 @@ while ($datos = $sql->fetch()) {
         <div class='card card-individual-complejo'>
             <img src=" . $datos["nombre_imagen"] . " class='card-img-top'>
 
-            <div class='card-body' style='background-color: black'>
-                <h5 class='card-title' style='color: white;'>" . $datos["nombre_complejo"] . "</h5>
+            <div class='card-body'>
+                <h5 class='card-title'>" . $datos["nombre_complejo"] . "</h5>
                 <a href=complejo_detalle.php?id_complejo=" . $datos["id_complejo"] . " class='stretched-link'></a>
             </div>
 

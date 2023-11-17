@@ -26,7 +26,10 @@ body {
     /*align-items: center;
     justify-content:center;
     text-align: center;*/
+    background-color: white;
 }
+
+
 
 .formulario {
     margin: 5px 0 0 0;

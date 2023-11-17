@@ -71,7 +71,6 @@ if (isset($_SESSION["emailLogin"])){ //si ya ingreso, lo redirigimos a inicio, n
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/estilos_inicio_de_sesion.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
@@ -82,13 +81,14 @@ if (isset($_SESSION["emailLogin"])){ //si ya ingreso, lo redirigimos a inicio, n
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos_inicio_de_sesion.css">
 
     <!-- <script src="js/script_inicio_de_sesion.js" async></script> -->
      <script src="js/script_inicio_de_sesion_clave.js" defer></script> 
 </head>
 
 <body>
-    <div class="form-informacion" style="background-color: white">
+    <div class="form-informacion">
         <h2>Iniciar sesión</h2>
         <p>Recuerda que es tu cuenta registrada en CineEnCartelera.com</p>
         <form action="" class="formulario" id="formLogin" method="post">
