@@ -15,7 +15,7 @@ require_once "informacion_pelicula.php";
     <link rel="stylesheet" href="css/estilos_inicio.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+    </script>
     <!--Busca las fuentes a utilizar-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,40 +45,35 @@ require_once "informacion_pelicula.php";
                         <?php echo $datos["nombre_pelicula"] ?>
                     </h1>
 
-                    <input type="hidden" name="nombre_pelicula" id="nombre_pelicula">
+                    <!--datos cargados con AJAX-->
 
                     <div>
                         <div>
                             Seleccione un complejo:
                             <select class="form-select" name="complejo" id="complejo">
-                                <option value="">--Seleccione un opción--</option>
-                                <?php echo require_once "cargar_lista_complejos_opciones.php" ?>
                             </select>
                         </div>
-                        <div>
 
+                        <div>
+                            Seleccione el día:
+                            <select class="form-select" name="dia" id="dia">
+                            </select>
+                        </div>
+
+                        <div>
                             Seleccione el formato:
                             <select class="form-select" name="formato" id="formato">
-                                <option value="">--Seleccione un opción--</option>
-                                <option value="2D">2D</option>
-                                <option value="3D">3D</option>
                             </select>
                         </div>
 
-                        <div>
-
-                            Seleccione el día:
-
-                            <input class="form-control" type="date" name="dia" id="dia">
-                        </div>
                         <div>
                             Seleccione el horario:
                             <select class="form-select" name="horario" id="horario">
-                                <option value="">--Seleccione un opción--</option>
-                                <option value="16:00hs">16:00hs</option>
-                                <option value="20:00hs">20:00hs</option>
+                                <option value="" selected>--Seleccione una opción--</option> <!--el horario se carga con AJAX al seleccionar el dia, por eso esta puesto como la opcion por defecto -->
                             </select>
                         </div>
+
+
                     </div>
 
                     <input type="hidden" name="id_pelicula" id="id_pelicula" value="<?php echo $_GET["id_pelicula"] ?>">
