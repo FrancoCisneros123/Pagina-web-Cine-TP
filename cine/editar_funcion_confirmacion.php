@@ -9,7 +9,6 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
 
 require "actualizar_funcion.php";
 require "cargar_funcion_creada_datos_pelicula.php";
-require "cargar_funcion_creada_datos_formato.php";
 
 ?>
 
@@ -58,7 +57,8 @@ require "cargar_funcion_creada_datos_formato.php";
                 "Horario: " . $_POST["horario_entrada"] . "<br>" .
                 "Sala: " . $_POST["sala"] . "<br>" .
                 "Pelicula: " . $pelicula . "<br>" .
-                "Formato: " . $formato . "<br>"
+                "Dia: " . $_POST["dia"] . "<br>" .
+                "Formato: " . $_POST["formato"] . "<br>"
                 ?>
 
             <a href="inicio.php" class="btn btn-primary mt-4">Ir a inicio</a>

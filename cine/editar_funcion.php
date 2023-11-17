@@ -72,10 +72,15 @@ require "cargar_funcion_edicion_datos.php";
                     </select>
                 </div>
 
+                 <div class="mb-3">
+                    <label for="dia" class="form-label">Dia</label>
+                    <input type="date" name="dia" id="dia" value=<?php echo $dia ?> class="form-control">
+                </div>
+
                 <div class="mb-3">
                     <label for="formato" class="form-label">Formato</label>
                     <select id="formato" name="formato" class="form-select">
-                        <option value=<?php echo $id_formato ?> select><?php echo $nombre_formato ?></option>
+                        <option value=<?php echo $formato ?> select><?php echo $formato ?></option>
                         <?php require_once "cargar_funcion_formato.php" ?>
                     </select>
                 </div>

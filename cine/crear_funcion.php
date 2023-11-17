@@ -44,7 +44,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
         <div class="container" id="funcion_crear">
             <h1>Crear funcion</h1>
 
-            <form action="funcion_creada.php" method="post">
+            <form action="crear_funcion_confirmacion.php" method="post">
 
                 <div class="mb-3">
                     <label for="horario_entrada" class="form-label">Horario</label>
@@ -65,6 +65,11 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
                     <select id="pelicula" name="pelicula" class="form-select">
                         <?php require_once "cargar_funcion_pelicula.php" ?>
                     </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="dia" class="form-label">Dia</label>
+                    <input type="date" name="dia" id="dia" class="form-control">
                 </div>
 
                 <div class="mb-3">

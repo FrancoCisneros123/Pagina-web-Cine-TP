@@ -49,6 +49,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
                     <th scope="col">Horario</th>
                     <th scope="col">Sala</th>
                     <th scope="col">Pelicula</th>
+                    <th scope="col">Dia</th>
                     <th scope="col">Formato</th>
                     <th scope="col">Editar</th>
                     <th scope="col">Eliminar</th>
