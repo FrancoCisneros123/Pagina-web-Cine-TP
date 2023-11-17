@@ -52,6 +52,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
                                             <th>Fecha nacimiento</th>
                                             <th>Genero</th>
                                             <th>&nbsp;</th>
+                                            <th>&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -59,6 +60,12 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
                                     </tbody>
                                 </table>
                             </div>
+
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <a href="MVC/validargerente.php" class="btn btn-success"
+                                    id="btnregistrar">Agregar nuevo gerente</a>
+                            </div>
+
                         </div>
                     </div>
                 </div>

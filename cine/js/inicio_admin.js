@@ -52,7 +52,9 @@ window.onload = function () {
                 aEditar.classList.add('btn', 'btn-primary');
                 aEditar.innerText = 'Editar';
                 td.appendChild(aEditar);
+                tr.appendChild(td);
 
+                td = document.createElement('td');
                 let aEliminar = document.createElement('a');
                 aEliminar.setAttribute('href', 'eliminar_gerente.php?id=' + usuario.id_usuario);
                 aEliminar.classList.add('btn', 'btn-danger');
