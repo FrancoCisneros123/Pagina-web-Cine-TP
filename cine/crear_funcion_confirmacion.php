@@ -61,7 +61,7 @@ require "cargar_funcion_creada_datos_pelicula.php";
                 "Formato: " . $_POST["formato"] . "<br>"
             ?>
 
-            <a href="crear_funcion.php" class="btn btn-primary mt-4">Volver a la creacion de funciones</a>
+            <a href="gerente_funciones.php" class="btn btn-primary mt-4">Volver a la administracion de funciones</a>
         </div>
 
         <!--footer-->
