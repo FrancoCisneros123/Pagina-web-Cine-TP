@@ -53,7 +53,7 @@ require "cargar_funcion_edicion_datos.php";
                 Horario: <?php echo $horario_entrada ?> <br>
                 Sala: <?php echo $id_sala ?> <br>
                 Pelicula: <?php echo $nombre_pelicula ?> <br>
-                Formato: <?php echo $nombre_formato ?> <br>
+                Formato: <?php echo $formato ?> <br>
 
                 <div class="mb-4 mt-4">
                     <button type="submit" class="btn btn-danger">Eliminar funcion</button>
