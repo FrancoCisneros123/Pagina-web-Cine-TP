@@ -82,7 +82,7 @@
             </select><br>
             
             <button class="btn btn-danger" name="submit">Agregar</button>
-            <button class="btn btn-primary">Cancelar</button>
+            <a href="home_gerente.php" class="btn btn-primary">Cancelar</a>
         </form>
     </div><br>
 
