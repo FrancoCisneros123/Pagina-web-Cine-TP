@@ -33,6 +33,7 @@ require "redireccion_gerente.php";
 
     <script src="js/script_barra_navegacion.js" defer></script>
     <script src="js/script_footer.js" defer></script>
+    <script src="js/script_funcion.js" defer></script>
 </head>
 
 <body>
@@ -47,25 +48,20 @@ require "redireccion_gerente.php";
 
             <form action="crear_funcion_confirmacion.php" method="post">
 
+                <!--Datos cargados con AJAX-->
                 <div class="mb-3">
                     <label for="horario_entrada" class="form-label">Horario</label>
-                    <select id="horario_entrada" name="horario_entrada" class="form-select">
-                        <?php require_once "cargar_funcion_horario.php" ?>
-                    </select>
+                    <select id="horario_entrada" name="horario_entrada" class="form-select"></select>
                 </div>
 
                 <div class="mb-3">
                     <label for="sala" class="form-label">Sala </label>
-                    <select id="sala" name="sala" class="form-select">
-                        <?php require_once "cargar_funcion_sala.php" ?>
-                    </select>
+                    <select id="sala" name="sala" class="form-select"></select>
                 </div>
 
                 <div class="mb-3">
                     <label for="pelicula" class="form-label">Pelicula </label>
-                    <select id="pelicula" name="pelicula" class="form-select">
-                        <?php require_once "cargar_funcion_pelicula.php" ?>
-                    </select>
+                    <select id="pelicula" name="pelicula" class="form-select"></select>
                 </div>
 
                 <div class="mb-3">
@@ -75,13 +71,11 @@ require "redireccion_gerente.php";
 
                 <div class="mb-3">
                     <label for="formato" class="form-label">Formato</label>
-                    <select id="formato" name="formato" class="form-select">
-                        <?php require_once "cargar_funcion_formato.php" ?>
-                    </select>
+                    <select id="formato" name="formato" class="form-select"></select>
                 </div>
 
                 <div class="mb-4">
-                    <button type="submit" class="btn btn-primary">Crear funcion</button>
+                    <button type="submit" class="btn btn-primary" name="crear" id="crear" disabled>Crear funcion</button>
                 </div>
             </form>
         </div>

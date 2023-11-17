@@ -2,6 +2,8 @@
 
 require_once "conexion.php";
 
+echo "<option value=''>Seleccione una opcion</option>";
+
 $sql = $conn->query("SELECT id_pelicula, nombre_pelicula FROM pelicula");
 
 while ($datos = $sql->fetch()) {
