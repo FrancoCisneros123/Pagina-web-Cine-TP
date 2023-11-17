@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="form-informacion" style="background-color: white">
+    <div class="form-informacion">
         <h2>Registrarse</h2>
         <p>Complete los campos a continuacion para crear una cuenta</p>
         <?php

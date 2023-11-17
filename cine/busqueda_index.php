@@ -6,6 +6,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
     die(); //finalizaria la ejecucion de este script ya que el usuario no inicio sesion
 
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
     <link rel="stylesheet" href="css/estilos_inicio.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+    </script>
     <!--Busca las fuentes a utilizar-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,6 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/estilo_container_padding.css">
-    <script src="js/script_inicio.js" defer></script>
 
     <script src="js/script_barra_navegacion.js" defer></script>
     <script src="js/script_footer.js" defer></script>
@@ -40,38 +40,20 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
         <!--barra de navegacion-->
         <?php require_once "barra_navegacion.php"; ?>
 
-        <?php require_once "carousel.php"; ?>
-
         <div class="container" id="textocartelera">
             <div class="row">
                 <div class="col-12">
-                    <h2>CARTELERA</h2>
+                    <h2>Resultados</h2>
                 </div>
             </div>
         </div>
 
-        <!--peliculas cargadas con AJAX-->
+        <!--cards-->
         <div class="container">
-            <div class="row" id="peliculas"></div>
-        </div>
-
-    </div>
-
-    </div>
-
-    <!--estrenos-->
-    <div class="container cards">
-
-        <div class="container" id="textoproximamente">
-            <div class="row">
-                <div class="col-12">
-                    <h2>PROXIMAMENTE</h2>
-                </div>
+            <div class="row" id="peliculas">
+                <?php require_once "busqueda_cargar_resultado.php"; ?>
             </div>
         </div>
-
-        <!--estrenos cargados con AJAX-->
-        <div class="row" id="estrenos"></div>
 
     </div>
 

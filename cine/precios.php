@@ -54,7 +54,7 @@
                     <td><b>PRECIO</b></td>
                 </tr>
 
-                <?php require_once "cargarSalaPrecio.php"; ?>
+                <?php require_once "cargar_sala_precio.php"; ?>
 
             </table>
 

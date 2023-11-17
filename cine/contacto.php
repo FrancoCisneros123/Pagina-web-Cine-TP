@@ -33,7 +33,7 @@
     </div>
 
     <form>
-        <div class="container" style="margin-top: 25px; margin-bottom: 25px;">
+        <div class="container" id="contacto-parrafo">
             <div class="row">
                 <h2><b>CONTACTENOS</b></h2>
                 <p>Si deseas contactarnos puedes hacerlo en este formulario o en las redes sociales. Envianos tu
@@ -60,7 +60,7 @@
                     <b>COMPLEJO</b>
                     <select class="form-select" aria-label="Default select example" required>
                         <option selected>Selecciona una opcion</option>
-                        <?php echo require_once "cargarListaComplejosOpciones.php" ?>
+                        <?php echo require_once "cargar_lista_complejos_opciones.php" ?>
                     </select>
 
                     <b>ASUNTO</b>
@@ -79,14 +79,13 @@
                 <div class="col-12 col-sm-6">
                     <b>INGRESE SU CONSULTA</b>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                            style="height: 100px"></textarea>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
                         <label for="floatingTextarea2">MENSAJE</label>
                     </div>
                 </div>
 
-                <div class="col-3" style="margin-top: 10px;">
-                    <button type="submit" class="btn btn-outline-warning">ENVIAR</button>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-outline-warning" id="enviar-contacto">ENVIAR</button>
                 </div>
             </div>
         </div>

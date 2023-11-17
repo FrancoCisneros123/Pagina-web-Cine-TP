@@ -20,7 +20,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
     <link rel="stylesheet" href="css/estilos_inicio.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+    </script>
     <!--Busca las fuentes a utilizar-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,38 +40,33 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
         <!--barra de navegacion-->
         <?php require_once "barra_navegacion.php"; ?>
 
-        <?php require_once "carousel.php"; ?>
-
-        <div class="container" id="textocartelera">
-            <div class="row">
-                <div class="col-12">
-                    <h2>CARTELERA</h2>
-                </div>
-            </div>
-        </div>
-
-        <!--peliculas cargadas con AJAX-->
         <div class="container">
-            <div class="row" id="peliculas"></div>
+
+        <a href="gerente_funciones.php" class="btn btn-primary mt-4 mb-4">Administrar peliculas</a>
+        <a href="gerente_funciones.php" class="btn btn-primary mt-4 mb-4">Administrar funciones</a>
+
+        <h1>Listado de funciones</h1>
+        <a href="crear_funcion.php" class="btn btn-primary mt-4 mb-4">Agregar funcion</a>
+
+        <table class="table table-striped table-hover mt-4 mb-4 text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Funcion</th>
+                    <th scope="col">Horario</th>
+                    <th scope="col">Sala</th>
+                    <th scope="col">Pelicula</th>
+                    <th scope="col">Dia</th>
+                    <th scope="col">Formato</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php require "cargar_funciones_gerente.php" ?>
+            </tbody>
+        </table>
+
         </div>
-
-    </div>
-
-    </div>
-
-    <!--estrenos-->
-    <div class="container cards">
-
-        <div class="container" id="textoproximamente">
-            <div class="row">
-                <div class="col-12">
-                    <h2>PROXIMAMENTE</h2>
-                </div>
-            </div>
-        </div>
-
-        <!--estrenos cargados con AJAX-->
-        <div class="row" id="estrenos"></div>
 
     </div>
 

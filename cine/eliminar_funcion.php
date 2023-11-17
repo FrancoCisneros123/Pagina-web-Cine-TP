@@ -6,6 +6,8 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
     die(); //finalizaria la ejecucion de este script ya que el usuario no inicio sesion
 
 }
+
+require "cargar_funcion_edicion_datos.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineEnCartelera - inicio</title>
+    <title>CineEnCartelera</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos_inicio.css">
@@ -28,7 +30,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/estilo_container_padding.css">
-    <script src="js/script_inicio.js" defer></script>
+    <link rel="stylesheet" href="css/estilo_funcion.css">
 
     <script src="js/script_barra_navegacion.js" defer></script>
     <script src="js/script_footer.js" defer></script>
@@ -40,43 +42,29 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
         <!--barra de navegacion-->
         <?php require_once "barra_navegacion.php"; ?>
 
-        <?php require_once "carousel.php"; ?>
+        <!--crear funcion-->
+        <div class="container" id="funcion_crear">
+            <h1>Eliminar funcion
+                <?php echo $_GET["id_funcion"] ?>
+            </h1>
 
-        <div class="container" id="textocartelera">
-            <div class="row">
-                <div class="col-12">
-                    <h2>CARTELERA</h2>
+            <form action="eliminar_funcion_confirmacion.php" method="post">
+
+                Horario: <?php echo $horario_entrada ?> <br>
+                Sala: <?php echo $id_sala ?> <br>
+                Pelicula: <?php echo $nombre_pelicula ?> <br>
+                Formato: <?php echo $formato ?> <br>
+
+                <div class="mb-4 mt-4">
+                    <button type="submit" class="btn btn-danger">Eliminar funcion</button>
                 </div>
-            </div>
+
+                <input type="hidden" name="id_funcion" value=<?php echo $_GET["id_funcion"] ?>>
+            </form>
         </div>
 
-        <!--peliculas cargadas con AJAX-->
-        <div class="container">
-            <div class="row" id="peliculas"></div>
-        </div>
-
-    </div>
-
-    </div>
-
-    <!--estrenos-->
-    <div class="container cards">
-
-        <div class="container" id="textoproximamente">
-            <div class="row">
-                <div class="col-12">
-                    <h2>PROXIMAMENTE</h2>
-                </div>
-            </div>
-        </div>
-
-        <!--estrenos cargados con AJAX-->
-        <div class="row" id="estrenos"></div>
-
-    </div>
-
-    <!--footer-->
-    <?php require_once "footer.php"; ?>
+        <!--footer-->
+        <?php require_once "footer.php"; ?>
 
 </body>
 

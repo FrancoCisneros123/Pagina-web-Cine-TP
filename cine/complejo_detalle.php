@@ -1,4 +1,4 @@
-<?php require_once "cargarDatosComplejo.php"; ?>
+<?php require_once "cargar_datos_complejo.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos_inicio.css">
-    <link rel="stylesheet" href="css/estilos_paginas_complemento.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
@@ -21,6 +20,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/estilo_container_padding.css">
+    <link rel="stylesheet" href="css/estilos_paginas_complemento.css">
 
     <script src="js/script_barra_navegacion.js" defer></script>
     <script src="js/script_footer.js" defer></script>
@@ -80,9 +80,7 @@
                         <?php echo $datos["descripcion"] ?>
                     </p>
 
-                    <iframe style="margin-bottom: 30px;" src=<?php echo $datos["direccion_maps"] ?> width="100%"
-                        height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="iframe" src=<?php echo $datos["direccion_maps"] ?> allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
 
