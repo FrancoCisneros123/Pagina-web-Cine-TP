@@ -60,7 +60,7 @@
                     <b>COMPLEJO</b>
                     <select class="form-select" aria-label="Default select example" required>
                         <option selected>Selecciona una opcion</option>
-                        <?php echo require_once "cargarListaComplejosOpciones.php" ?>
+                        <?php echo require_once "cargar_lista_complejos_opciones.php" ?>
                     </select>
 
                     <b>ASUNTO</b>

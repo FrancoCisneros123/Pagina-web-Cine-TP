@@ -38,7 +38,7 @@ require_once "informacion_pelicula.php";
                     class="img-fluid rounded mx-auto d-block">
             </div>
             <div>
-                <form action="comprarBoleto.php" method="post">
+                <form action="comprar_boleto.php" method="post">
                     <br>
                     <h1 id="titulo">
                         <?php echo $datos["nombre_pelicula"] ?>
@@ -51,7 +51,7 @@ require_once "informacion_pelicula.php";
                             Seleccione un complejo:
                             <select class="form-select" name="complejo" id="complejo">
                                 <option value="">--Seleccione un opción--</option>
-                                <?php echo require_once "cargarListaComplejosOpciones.php" ?>
+                                <?php echo require_once "cargar_lista_complejos_opciones.php" ?>
                             </select>
                         </div>
                         <div>

@@ -51,7 +51,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
         <!--cards-->
         <div class="container">
             <div class="row" id="peliculas">
-                <?php require_once "busquedaCargarResultado.php"; ?>
+                <?php require_once "busqueda_cargar_resultado.php"; ?>
             </div>
         </div>
 

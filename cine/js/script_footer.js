@@ -18,7 +18,7 @@ function cargarRedesContacto()
             contacto.innerHTML = xhttp.responseText;
     }
 
-    xhttp.open("get","cargarRedesContacto.php");
+    xhttp.open("get","cargar_redes_contacto.php");
     xhttp.send();
 }
 
@@ -32,7 +32,7 @@ function cargarSobreNosotros()
             sobreNosotros.innerHTML = xhttp.responseText;
     }
 
-    xhttp.open("get","cargarSobreNosotros.php");
+    xhttp.open("get","cargar_sobre_nosotros.php");
     xhttp.send();
 }
 
@@ -46,6 +46,6 @@ function cargarListaComplejosFooter()
             listaComplejos.innerHTML = xhttp.responseText;
     }
 
-    xhttp.open("get","cargarListaComplejosFooter.php");
+    xhttp.open("get","cargar_lista_complejos_footer.php");
     xhttp.send();
 }
