@@ -82,8 +82,9 @@ require_once "informacion_pelicula.php";
 
                     <br><button type="submit" class="btn btn-danger" name="comprar" id="comprar" disabled>Comprar entradas</button>
                 </form>
-            </div>
 
+                <a href="sala.php" class="btn btn-primary mt-3" name="ver-sala" id="ver-sala">Ver sala</a>
+            </div>
         </div>
 
         <br>
