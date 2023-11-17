@@ -49,7 +49,7 @@ require "eliminar_funcion_query.php";
                 <?php echo $_POST["id_funcion"] ?> Eliminada
             </h1>
 
-            <a href="inicio.php" class="btn btn-primary mt-4">Ir a inicio</a>
+            <a href="gerente_funciones.php" class="btn btn-primary mt-4">Volver a la administracion de funciones</a>
         </div>
 
         <!--footer-->
