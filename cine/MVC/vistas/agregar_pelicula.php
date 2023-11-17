@@ -47,32 +47,32 @@
         <form action="" method="post">
         
             <label for="nombre">Nombre de la pélicula:</label>
-            <input class="form-control" type="text" name="nombre_pelicula" id="nombre"><br>
+            <input class="form-control" type="text" name="nombre_pelicula" id="nombre" required><br>
 
             <label for="duracion">Duración:</label>
-            <input class="form-control" type="text" name="duracion" id="duracion"><br>
+            <input class="form-control" type="text" name="duracion" id="duracion" required><br>
 
             <label for="fecha_estreno">Fecha de estreno:</label>
-            <input class="form-control" type="date" name="fecha_estreno" id="fecha_estreno"><br>
+            <input class="form-control" type="date" name="fecha_estreno" id="fecha_estreno" required><br>
 
             <label for="fecha_baja">Fecha de baja:</label>
-            <input class="form-control" type="date" name="fecha_baja" id="fecha_baja"><br>
+            <input class="form-control" type="date" name="fecha_baja" id="fecha_baja" required><br>
 
             <label for="nombre_imagen">Nombre de la imagen:</label>
-            <input class="form-control" type="text" name="nombre_imagen" id="nombre_imagen"><br>
+            <input class="form-control" type="text" name="nombre_imagen" id="nombre_imagen" required><br>
 
             <label for="sinopsis">Sinopsis:</label>
-            <textarea class="form-control" rows="4" name="sinopsis" id="sinopsis" placeholder="Máximo de 50.000 cáracteres"></textarea>
+            <textarea class="form-control" rows="4" name="sinopsis" id="sinopsis" placeholder="Máximo de 50.000 cáracteres" required></textarea>
             <br>
 
             <label for="formatos">Formatos:</label>
-            <input class="form-control" type="text" name="formatos" id="formatos"><br>
+            <input class="form-control" type="text" name="formatos" id="formatos" required><br>
 
             <label for="idiomas">Idiomas:</label>
-            <input class="form-control" type="text" name="idiomas" id="idiomas"><br>
+            <input class="form-control" type="text" name="idiomas" id="idiomas" required><br>
 
             <label for="generos">Géneros:</label>
-            <input class="form-control" type="text" name="generos" id="generos"><br>
+            <input class="form-control" type="text" name="generos" id="generos" required><br>
 
             <label for="esEstreno">¿Es estreno?:</label>
             <select class="form-select" name="esEstreno" id="esEstreno">
