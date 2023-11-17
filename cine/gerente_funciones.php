@@ -45,7 +45,7 @@ require "redireccion_gerente.php";
 
         <div class="container">
 
-        <a href="gerente_funciones.php" class="btn btn-primary mt-4 mb-4">Administrar peliculas</a>
+        <a href="home_gerente.php" class="btn btn-primary mt-4 mb-4">Administrar peliculas</a>
         <a href="gerente_funciones.php" class="btn btn-primary mt-4 mb-4">Administrar funciones</a>
 
         <h1>Listado de funciones</h1>

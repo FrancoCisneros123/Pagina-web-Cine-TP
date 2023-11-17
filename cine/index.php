@@ -26,7 +26,37 @@ if (isset($_POST["emailLogin"]) && isset($_POST["passwordLogin"])) {
         $_SESSION["emailLogin"] = $email;
         $_SESSION["id_usuario"] = $result["id_usuario"];
         $_SESSION["id_tipo_usuario"] = $result["id_tipo_usuario"];
-        header("location: inicio.php");
+
+        
+            
+        if($_SESSION["id_tipo_usuario"] == 1)
+        {
+            header("location: inicio.php");
+            die();
+        }
+        else
+        {
+            if($_SESSION["id_tipo_usuario"] == 2)
+            {
+                header("location: inicio_admin.php");
+                die();
+            }
+
+            else
+            {
+                if($_SESSION["id_tipo_usuario"] == 3){
+                    header("location: home_gerente.php");
+                    die();
+                }
+            }
+        }
+       
+        
+            
+
+        
+        
+            
     } else {
         $error = "Login fallido";
     }
