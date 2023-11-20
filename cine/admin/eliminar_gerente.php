@@ -1,5 +1,5 @@
 <?php
-require_once('conexion.php');
+require_once('../conexion.php');
 
 $id = $_GET['id']; // guarda el id
 
