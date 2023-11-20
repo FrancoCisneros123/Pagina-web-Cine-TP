@@ -44,7 +44,7 @@ class gerenteControlador
                     $nacimiento = $_POST["nacimiento"];
                     $genero = $_POST["genero"];
                     $celular = $_POST["celular"];
-                    $tipo_usuario = 2; // Simula que al registrarse es un usuario tipo gerente
+                    $tipo_usuario = 3; // Simula que al registrarse es un usuario tipo gerente
 
                     //se crea un objeto con el constuctor de la clase usuario (Usamos la clase usuario pero creamos un gerente) y se le pasa como parametro las variables que contienen lo que se recibio del formulario
                     $objUsuario = new usuario($nombre, $apellido, $email, $contrasena, $confirmarcontrasena, $nacimiento, $genero, $celular, $tipo_usuario);

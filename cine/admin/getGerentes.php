@@ -1,5 +1,5 @@
 <?php
-require_once('conexion.php');
+require_once('../conexion.php');
 
 $queryString = "SELECT * FROM usuario where id_tipo_usuario = 3";
 
