@@ -32,6 +32,11 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
 
     <script src="js/script_barra_navegacion.js" defer></script>
     <script src="js/script_footer.js" defer></script>
+
+    <!-- Iconos bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    
 </head>
 
 <body>
@@ -39,13 +44,12 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
 
         <!--barra de navegacion-->
         <?php require_once "barra_navegacion.php"; ?>
-
         <?php require_once "carousel.php"; ?>
 
         <div class="container" id="textocartelera">
             <div class="row">
                 <div class="col-12">
-                    <h2>CARTELERA</h2>
+                <h2><i class="bi bi-film"></i><b> CARTELERA</b> </h2>
                 </div>
             </div>
         </div>
@@ -65,7 +69,7 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
         <div class="container" id="textoproximamente">
             <div class="row">
                 <div class="col-12">
-                    <h2>PROXIMAMENTE</h2>
+                    <h2><b>PROXIMAMENTE</b></h2>
                 </div>
             </div>
         </div>

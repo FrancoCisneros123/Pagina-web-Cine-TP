@@ -1,8 +1,14 @@
 <?php 
-    require("conexion.php");
+session_start();
 
-    $peliculas_query = $conn->query("SELECT id_pelicula,nombre_pelicula,fecha_estreno,fecha_baja FROM pelicula");
-    $conn = null;
+if (!isset($_SESSION["emailLogin"]))
+ { 
+    header("location: index.php"); 
+    die(); 
+}
+use controladores\PeliculaControlador;
+require("MVC/controladores/peliculaControlador.php");
 
-    require("MVC/vistas/lista_pelicula.php");
+$peliculaControlador = new PeliculaControlador();
+$peliculaControlador->mostrarListaPeliculas();
 ?>
