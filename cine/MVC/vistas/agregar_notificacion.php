@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">    
+    
     <link rel="stylesheet" href="css/estilo_container_padding.css">
     <script src="js/script_inicio.js" defer></script>
 
@@ -27,8 +29,10 @@
 <body>
     <?php require_once "barra_navegacion.php"; ?><br>
 
-    <div class="container"> 
-        <h2>Agregar nueva pélicula:</h2><br>
+    <div class="container">
+        <a href="notificacion_menu.php">Volver atrás</a> 
+        <h2 class="mt-3">Agregar nueva notificacion:</h2><br>
+
         <?php
          if (count($arrayErrores) > 0) {
             echo "<div class='alert alert-danger'><strong>Se han detectado los siguientes errores:</strong></br><ul>";
@@ -40,52 +44,26 @@
         }
         if($resultado == true){
             echo '<div class="alert alert-success" role="alert">
-            Se agregó la pélicula con éxito.
+            <i class="bi bi-check-lg"></i> Se agregó la nueva notificación con éxito.
           </div>';
         }
         ?>
        
         <form action="" method="post">
         
-            <label for="nombre">Nombre de la pélicula:</label>
-            <input class="form-control" type="text" name="nombre_pelicula" id="nombre" ><br>
+            <label for="titulo">Titulo de la notificación:</label>
+            <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Debe tener menos de 50 cáracteres"><br>
 
-            <label for="duracion">Duración:</label>
-            <input class="form-control" type="text" name="duracion" id="duracion" ><br>
+            <label for="descripcion">Descripción:</label>
+            <textarea class="form-control" name="descripcion" id="descripcion" rows="4" placeholder="Debe tener menos de 100 cáracteres."></textarea>
 
-            <label for="fecha_estreno">Fecha de estreno:</label>
-            <input class="form-control" type="date" name="fecha_estreno" id="fecha_estreno" ><br>
-
-            <label for="fecha_baja">Fecha de baja:</label>
-            <input class="form-control" type="date" name="fecha_baja" id="fecha_baja" ><br>
-
-            <label for="nombre_imagen">Nombre de la imagen:</label>
-            <input class="form-control" type="file" name="nombre_imagen" id="nombre_imagen" ><br>
-
-            <label for="sinopsis">Sinopsis:</label>
-            <textarea class="form-control" rows="4" name="sinopsis" id="sinopsis" placeholder="Máximo de 50.000 cáracteres" ></textarea>
-            <br>
-
-            <label for="formatos">Formatos:</label>
-            <input class="form-control" type="text" name="formatos" id="formatos" ><br>
-
-            <label for="idiomas">Idiomas:</label>
-            <input class="form-control" type="text" name="idiomas" id="idiomas" ><br>
-
-            <label for="generos">Géneros:</label>
-            <input class="form-control" type="text" name="generos" id="generos" ><br>
-
-            <label for="esEstreno">¿Es estreno?:</label>
-            <select class="form-select" name="esEstreno" id="esEstreno">
-                <option value="default">--Seleccione una opción--</option>
-                <option value="si">Si</option>
-                <option value="no">No</option>
-            </select><br>
-            
+            <div class="mt-4">
             <button class="btn btn-warning" name="submit">Agregar</button>
-            <a href="home_gerente.php" class="btn btn-danger">Cancelar</a>
+            <a href="notificacion_menu.php" class="btn btn-danger">Cancelar</a>
+            </div>
+            
         </form>
+        <div class="alert alert-info mt-5"><i class="bi bi-info-circle"></i> Todas las notificaciones creadas seran visualizadas unicamente por los usuarios clientes.</div>
     </div><br>
 
     <?php require_once "footer.php";?>
-   
