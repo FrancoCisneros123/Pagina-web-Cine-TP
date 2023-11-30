@@ -1,17 +1,13 @@
 <?php
+use controladores\peliculaControlador;
 session_start();
 
-if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
-    header("location: index.php"); //redirige al login 
-    die(); //finalizaria la ejecucion de este script ya que el usuario no inicio sesion
-
+if (!isset($_SESSION["emailLogin"])) { 
+    header("location: index.php"); 
+    die(); 
 }
-?> 
 
-<?php 
-    use controladores\peliculaControlador;
-    
-    require ("MVC/controladores/peliculaControlador.php");
-    $pelicula_controlador = new peliculaControlador();
-    $pelicula_controlador->nuevaPelicula();
+require ("MVC/controladores/peliculaControlador.php");
+$pelicula_controlador = new PeliculaControlador();
+$pelicula_controlador->nuevaPelicula();
 ?>

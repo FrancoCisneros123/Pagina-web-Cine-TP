@@ -30,6 +30,8 @@ require "redireccion_gerente.php";
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="css/estilo_container_padding.css">
     <script src="js/script_inicio.js" defer></script>
 
@@ -41,17 +43,22 @@ require "redireccion_gerente.php";
     <div class="container-fluid" id="container-padding">
 
         <!--barra de navegacion-->
-        <?php require_once "barra_navegacion.php"; ?>
+        <?php require_once "barra_navegacion.php"; ?><br>
 
         <div class="container">
 
-        <a href="home_gerente.php" class="btn btn-primary mt-4 mb-4">Administrar peliculas</a>
-        <a href="gerente_funciones.php" class="btn btn-primary mt-4 mb-4">Administrar funciones</a>
+        <nav class="nav nav-tabs">
+            <a class="nav-link link-warning" href="home_gerente.php"><i class="bi bi-film"></i> Peliculas</a>
+            <a class="nav-link link-dark active" href="#"><i class="bi bi-clock"></i></i> Funciones</a>
+            <a class="nav-link link-warning" href="#"> <i class="bi bi-door-closed"></i></i>Salas</a>
+            <a class="nav-link link-warning" href="#"><i class="bi bi-bell"></i> Notificaciones</a>
+            <a class="nav-link link-warning" href="#"><i class="bi bi-piggy-bank"></i> Beneficios</a>
+        </nav>
 
-        <h1>Listado de funciones</h1>
+        <h1 class="mt-5">Listado de funciones</h1>
         <a href="crear_funcion.php" class="btn btn-primary mt-4 mb-4">Agregar funcion</a>
 
-        <table class="table table-striped table-hover mt-4 mb-4 text-center">
+        <table class="table table-striped table-dark table-hover mt-4 mb-4 text-center">
             <thead>
                 <tr>
                     <th scope="col">Funcion</th>
