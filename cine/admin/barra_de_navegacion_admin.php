@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-3 border-bottom border-danger">
     <div class="container-fluid">
         <a href="inicio.php" class="navbar-brand">
-            <img class="img-thumbnail" src="imagenes/logo_inicio_opcion2.jpeg" alt="CINE EN CARTELERA" id="logonav">
+            <img class="img-thumbnail" src="../imagenes/logo_inicio_opcion2.jpeg" alt="CINE EN CARTELERA" id="logonav">
             <!--logo en el extremo superior izquierdo-->
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
@@ -32,7 +32,7 @@
                 <!--boton de cerrar sesion-->
                 <li class="nav-item">
                     <form class="d-flex botones">
-                        <a href="desloguear.php" class="btn btn-outline-danger" type="submit">Logout</a>
+                        <a href="../desloguear.php" class="btn btn-outline-danger" type="submit">Logout</a>
                     </form>
                 </li>
 
