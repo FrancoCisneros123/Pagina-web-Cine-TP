@@ -6,6 +6,14 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
     die(); //finalizaria la ejecucion de este script ya que el usuario no inicio sesion
 
 }
+
+require("MVC/controladores/permisos.php");
+$permisosObj = new Permisos();
+
+if(! $permisosObj->tienePermiso("Crear nueva función", $_SESSION["id_usuario"])) {
+    require ("MVC/vistas/error_permiso.php");
+    die();
+}
 require "redireccion_gerente.php";
 ?>
 
