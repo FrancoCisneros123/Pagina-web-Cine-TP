@@ -38,7 +38,7 @@ if (isset($_POST["emailLogin"]) && isset($_POST["passwordLogin"])) {
         {
             if($_SESSION["id_tipo_usuario"] == 2)
             {
-                header("location: inicio_admin.php");
+                header("location: admin/inicio_admin.php");
                 die();
             }
 
