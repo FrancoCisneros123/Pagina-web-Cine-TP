@@ -32,7 +32,7 @@
                 <!--boton de cerrar sesion-->
                 <li class="nav-item">
                     <form class="d-flex botones">
-                        <a href="desloguear.php" class="btn btn-outline-danger" type="submit">Logout</a>
+                        <a href="../desloguear.php" class="btn btn-outline-danger" type="submit">Logout</a>
                     </form>
                 </li>
 
