@@ -8,10 +8,8 @@ let reservar = document.getElementById("reservar");
 let arrayDisponibilidad = [];
 let idSala = document.getElementById("id_sala");
 
-
 window.addEventListener("load", () => {
     crearFilaAsientos();
-    cargarAsientosReservaOpciones();
     cargarInformacionAsientos();
 })
 
@@ -27,7 +25,6 @@ function cargarInformacionAsientos() {
                 document.getElementById("asiento-check-" + arrayDisponibilidad[i].asiento).classList.add("ocultar-check");
             }
 
-            console.log(arrayDisponibilidad[0].asiento);
         }
     }
 
@@ -55,7 +52,6 @@ reservar.addEventListener("click", () => {
     for (let i = 1; i < asientosMaximos; i++) {
         if (document.getElementById("asiento-check-" + i).checked) {
             arrayAsientos[i] = i;
-            console.log(arrayAsientos[i]);
 
             array += arrayAsientos[i];
 
@@ -68,7 +64,6 @@ reservar.addEventListener("click", () => {
 
     array += "]";
 
-    console.log(array);
 
     xhttp.open("get", "registrar_asientos.php" + array);
     xhttp.send(JSON.stringify(arrayAsientos));
@@ -134,18 +129,4 @@ function crearAsientos() {
     //aumento la cantidad maxima para las opciones del select
     if (asientoNumero > asientosMaximos)
         asientosMaximos = asientoNumero
-}
-
-/*cargo las opciones de los asientos del select*/
-function cargarAsientosReservaOpciones() {
-
-    for (let i = 1; i < asientosMaximos; i++) {
-        let opcion = document.createElement("option");
-
-        let NumeroOpcion = document.createTextNode(i);
-
-        opcion.appendChild(NumeroOpcion);
-
-        document.getElementById("dropdownAsiento").appendChild(opcion);
-    }
 }

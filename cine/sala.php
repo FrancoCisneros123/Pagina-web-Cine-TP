@@ -80,12 +80,6 @@
             <div class="row align-items-center">
 
                 <div class="col-auto">
-                    <select class="form-select" id="dropdownAsiento">
-                        <option selected>Seleccionar asiento</option>
-                    </select>
-                </div>
-
-                <div class="col-auto">
                     <button class="btn btn-success col-auto" id="reservar">Reservar asiento</button>
                 </div>
             </div>
