@@ -21,6 +21,23 @@ class gerenteControlador
                 $arrErrores['email'] = 'Error, complete el campo correctamente';
             }*/
 
+            $email = $_POST['email'];
+            require_once('../conexion.php');
+            /** @var \PDO $conn */
+
+            $sql = "SELECT * FROM usuario WHERE email = :email";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':email', $email);
+            $stmt->execute();
+
+
+            $rowCount = $stmt->rowCount();
+
+
+            if ($rowCount > 0) {
+                $arrErrores['email'] = 'Error, el mail ingresado ya existe';
+            }
+
             if (!isset($_POST['contrasena']) || strlen($_POST['contrasena']) < 6) {
                 $arrErrores['contraseña'] = 'Error, complete el campo correctamente';
             }
@@ -52,7 +69,7 @@ class gerenteControlador
 
                 } catch (Exception $e) {
                     echo "Error inesperado" . $e->getMessage();
-                    die();  
+                    die();
                 }
             }
         }
