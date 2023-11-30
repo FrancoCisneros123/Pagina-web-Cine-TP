@@ -4,11 +4,53 @@ let cantidadFilas = 7;
 let cantidadAsientos = 6;
 let cineAsientosIzquierda = document.getElementById("cine-asientos-izquierda");
 let cineAsientosDerecha = document.getElementById("cine-asientos-derecha");
+let reservar = document.getElementById("reservar");
 
 window.addEventListener("load", () => {
     crearFilaAsientos();
     cargarAsientosReservaOpciones();
 })
+
+reservar.addEventListener("click", () => {
+    let xhttp = new XMLHttpRequest();
+    let arrayAsientos = [];
+    let array = "?arrayAsientos=[";
+
+    let cantidadSeleccionada = 0;
+
+    //obtengo la cantidad de asientos seleccionados
+    for (let i = 1; i < asientosMaximos; i++) {
+        if (document.getElementById("asiento-id-" + i).checked) {
+            cantidadSeleccionada++;
+        }
+    }
+
+    let aux=0;
+
+    //valores
+    for (let i = 1; i < asientosMaximos; i++) {
+        if (document.getElementById("asiento-id-" + i).checked) {
+            arrayAsientos[i] = i;
+            console.log(arrayAsientos[i]);
+
+            array += arrayAsientos[i];
+
+            if (aux < cantidadSeleccionada - 1)
+                array += ",";
+
+            aux++;
+        }
+    }
+
+    array += "]";
+
+    console.log(array);
+
+    xhttp.open("get", "registrar_asientos.php" + array);
+    xhttp.send(JSON.stringify(arrayAsientos));
+
+})
+
 
 function crearFilaAsientos() {
     for (let i = 0; i < cantidadFilas; i++)
@@ -23,8 +65,7 @@ function crearAsientos() {
     let fila_derecha = [];
 
     //izquierda
-       for(let i = 1; i < cantidadAsientos; i++)
-    {
+    for (let i = 1; i < cantidadAsientos; i++) {
         //creo asientos como elementos div
         asiento_fila_izquierda[i] = document.createElement("div");
 
@@ -33,6 +74,8 @@ function crearAsientos() {
 
         //le agrego el numero a cada asiento 
         asiento_fila_izquierda[i].innerHTML = asientoNumero;
+        asiento_fila_izquierda[i].innerHTML += "<input type='checkbox' id='asiento-id-" + asientoNumero + "'  name='asiento-id-" + asientoNumero + "'>";
+
         asiento_fila_izquierda[i].setAttribute("id", asientoNumero);
         asientoNumero++;
 
@@ -44,13 +87,14 @@ function crearAsientos() {
     }
 
     //derecha
-    for(let i = 1; i < cantidadAsientos; i++)
-    {
+    for (let i = 1; i < cantidadAsientos; i++) {
         asiento_fila_derecha[i] = document.createElement("div");
 
         asiento_fila_derecha[i].className = "asiento";
 
         asiento_fila_derecha[i].innerHTML = asientoNumero;
+        asiento_fila_derecha[i].innerHTML += "<input type='checkbox' id='asiento-id-" + asientoNumero + "'  name='asiento-id-" + asientoNumero + "'>";
+
         asiento_fila_derecha[i].setAttribute("id", asientoNumero);
         asientoNumero++;
 

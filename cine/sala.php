@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="col-auto">
-                    <button class="btn btn-success col-auto" type="submit">Reservar asiento</button>
+                    <button class="btn btn-success col-auto" id="reservar">Reservar asiento</button>
                 </div>
             </div>
         </div>
