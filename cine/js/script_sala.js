@@ -34,6 +34,7 @@ function cargarInformacionAsientos() {
 
 reservar.addEventListener("click", () => {
     let xhttp = new XMLHttpRequest();
+    
     let arrayAsientos = [];
     let array = "?arrayAsientos=[";
 
@@ -64,9 +65,14 @@ reservar.addEventListener("click", () => {
 
     array += "]";
 
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState === 4 && xhttp.status === 200)
+            cargarInformacionAsientos()
+    }
 
-    xhttp.open("get", "registrar_asientos.php" + array);
-    xhttp.send(JSON.stringify(arrayAsientos));
+
+    xhttp.open("get", "registrar_asientos.php" + array + "&id_sala=" + idSala.value);
+    xhttp.send(JSON.stringify(array));
 
 })
 
