@@ -1,4 +1,19 @@
 <?php 
+    session_start();
+
+    if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
+        header("location: index.php"); //redirige al login 
+        die(); //finalizaria la ejecucion de este script ya que el usuario no inicio sesion
+
+    }
+
+    require("MVC/controladores/permisos.php");
+    $permisosObj = new Permisos();
+
+    if(! $permisosObj->tienePermiso("Crear nueva función", $_SESSION["id_usuario"])) {
+        require ("MVC/vistas/error_permiso.php");
+        die();
+    }
     $arrayErrores = [];
     $resultado = false;
 
