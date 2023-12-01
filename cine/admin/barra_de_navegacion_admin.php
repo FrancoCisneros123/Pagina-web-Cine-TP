@@ -20,15 +20,6 @@
             <!-- navbar-nav ms-auto -->
                 <!--etiqueta de boostrap 5 que coloca elementos en el lugar derecho (en este caso la lupa)-->
 
-                <li class="nav-item">
-                    <form action="busqueda_index.php" class="d-flex botones">
-                        <input class="form-control me-2" type="search" placeholder="Ingresa tu busqueda"
-                            aria-label="Search" id="busquedaUsuario" name="busquedaUsuario">
-
-                        <button class="btn btn-outline-warning" type="submit">Buscar</a>
-                    </form>
-                </li>
-
                 <!--boton de cerrar sesion-->
                 <li class="nav-item">
                     <form class="d-flex botones">
@@ -39,7 +30,7 @@
                 <!--boton de perfil-->
                 <li class="nav-item dropdown">
                     <form class="d-flex botones">
-                        <a href="perfil.php" class="btn btn-outline-primary" type="submit"><i
+                        <a href="perfil_admin.php" class="btn btn-outline-primary" type="submit"><i
                         class="bi bi-person-circle"></i>Mi perfil</a>
                     </form>
        
