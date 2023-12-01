@@ -1,3 +1,12 @@
+<?php
+require("../controladores/permisos.php");
+$permisosObj = new Permisos();
+
+if (!$permisosObj->tienePermiso("editar notificacion", $_SESSION["id_usuario"])) {
+    require("error_permiso.php");
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
