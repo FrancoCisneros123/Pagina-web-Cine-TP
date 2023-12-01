@@ -46,7 +46,7 @@ h3 {
     width: 35px;
     height: 50px;
     border-radius: 7px;
-    background: linear-gradient(to top, #545454, #bababa);
+   /* background: linear-gradient(to top, #545454, #bababa);*/
     margin-bottom: 10px;
     margin-top: -32px;
     /*pongo un valor negativo para que los asientos queden cerca verticalmente*/
@@ -224,22 +224,33 @@ h3 {
     margin-top: -10px;
 }
 
+/**/
+.asiento-libre {
+       background: linear-gradient(to top, #545454, #bababa);
 
-#asiento-libre-ejemplo {
-    margin-left: 10px;
-    margin-right: 20px;
 }
 
-#asiento-reservado-ejemplo {
+.asiento-reservado {
     background: linear-gradient(to top, #060136, #2205c6);
+}
+
+.asiento-ocupado {
+    background: linear-gradient(to top, #360101, #c60505);
+}
+
+/**/
+
+.asiento-libre-espaciado {
     margin-left: 10px;
     margin-right: 20px;
 }
 
-#asiento-ocupado-ejemplo {
+.asiento-reservado-espaciado {
+    background: linear-gradient(to top, #060136, #2205c6);
+}
+
+.asiento-ocupado-espaciado {
     background: linear-gradient(to top, #360101, #c60505);
-    margin-left: 10px;
-    margin-right: 20px;
 }
 
 .reserva {
@@ -254,4 +265,8 @@ h3 {
 
 #inicar-sesion {
     margin-left: 20px;
+}
+
+.ocultar-check {
+    display: none;
 }

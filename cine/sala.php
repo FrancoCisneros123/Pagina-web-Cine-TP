@@ -27,6 +27,8 @@
     <!--barra de navegacion-->
     <?php require_once "barra_navegacion.php"; ?>
 
+    <input type="hidden" name="id_sala" id="id_sala" value="<?php echo $_GET["id"]?>">
+
     <div class="container">
 
         <h1>Disponibilidad de la sala</h1>
@@ -60,13 +62,13 @@
         <div class="referencias">
 
             <p class="parrafo-referencia">Libre</p>
-            <div class="asiento ejemplo" id="asiento-libre-ejemplo"></div>
+            <div class="asiento ejemplo asiento-libre asiento-libre-ejemplo"></div>
 
             <p class="parrafo-referencia">Reservado</p>
-            <div class="asiento ejemplo" id="asiento-reservado-ejemplo"></div>
+            <div class="asiento ejemplo asiento-reservado asiento-reservado-ejemplo"></div>
 
             <p class="parrafo-referencia">Ocupado</p>
-            <div class="asiento ejemplo" id="asiento-ocupado-ejemplo"></div>
+            <div class="asiento ejemplo asiento-ocupado asiento-ocupado-ejemplo"></div>
 
         </div>
 
@@ -78,13 +80,7 @@
             <div class="row align-items-center">
 
                 <div class="col-auto">
-                    <select class="form-select" id="dropdownAsiento">
-                        <option selected>Seleccionar asiento</option>
-                    </select>
-                </div>
-
-                <div class="col-auto">
-                    <button class="btn btn-success col-auto" type="submit">Reservar asiento</button>
+                    <button class="btn btn-success col-auto" id="reservar">Reservar asiento</button>
                 </div>
             </div>
         </div>
