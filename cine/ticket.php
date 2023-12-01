@@ -2,12 +2,13 @@
 session_start();
 require_once "conexion.php";
 
-$sql = "INSERT INTO ticket (id_usuario, complejo, formato, dia, horario, pelicula, cantidad_boletos, precio_unitario, precio_compra)
-    VALUES (:id_usuario,:complejo, :formato, :dia, :horario, :nombre_pelicula, :cantidad_boletos, :precio_unitario, :precio_compra)";
+$sql = "INSERT INTO ticket (id_usuario, complejo, sala, formato, dia, horario, pelicula, cantidad_boletos, precio_unitario, precio_compra)
+    VALUES (:id_usuario,:complejo, :sala, :formato, :dia, :horario, :nombre_pelicula, :cantidad_boletos, :precio_unitario, :precio_compra)";
 
 $query = $conn->prepare($sql);
 $query->bindParam(":id_usuario", $_SESSION["id_usuario"]);
 $query->bindParam(":complejo", $_POST["complejo"]);
+$query->bindParam(":sala", $_POST["sala"]);
 $query->bindParam(":formato", $_POST["formato"]);
 $query->bindParam(":dia", $_POST["dia"]);
 $query->bindParam(":horario", $_POST["horario"]);
@@ -64,6 +65,7 @@ $query->execute();
             <div>
                 <?php
                     echo "Complejo: " . $_POST["complejo"] . "<br>"  .
+                    "Sala: " . $_POST["sala"] . "<br>" .
                     "Formato: " . $_POST["formato"] . "<br>" .
                     "Dia: " . $_POST["dia"] . "<br>" .
                     "Horario: " . $_POST["horario"] . "<br>" .
@@ -75,6 +77,8 @@ $query->execute();
             </div>
 
         </div>
+
+        <a href="inicio.php" class="btn btn-primary mt-5 mb-5">Volver a la cartelera</a>
 
     </div>
 

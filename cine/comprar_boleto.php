@@ -55,7 +55,7 @@ else
             </h2>
 
             <div>
-                <form action="ticket.php" method="post">
+                <form action="sala.php" method="post">
                     <br>
 
                     <label for="cantidad_boletos" class="form-label">Cantidad de boletos</label>
@@ -68,15 +68,17 @@ else
                     <input type="number" name="precio_compra" id="precio_compra" class="form-control" value="<?php echo $precio ?>" readonly>
 
                     <input type="hidden" name="complejo" id="complejo" value=<?php echo $_POST["complejo"]?>>
+                    <input type="hidden" name="sala" id="sala" value=<?php echo $_POST["sala"] ?>>
                     <input type="hidden" name="formato" id="formato" value=<?php echo $_POST["formato"] ?>>
                     <input type="hidden" name="dia" id="dia" value=<?php echo $_POST["dia"] ?>>
                     <input type="hidden" name="horario" id="horario" value=<?php echo $_POST["horario"] ?>>
                     <input type="hidden" name="nombre_pelicula" id="nombre_pelicula" value=<?php echo $_POST["nombre_pelicula"] ?>>
                     <input type="hidden" name="nombre_imagen" id="nombre_imagen" value=<?php echo $_POST["nombre_imagen"] ?>>
 
-                    <br><button type="submit" class="btn btn-success">Confirmar compra</button>
+                    <br><button type="submit" class="btn btn-success">Reservar asientos</button>
                 </form>
             </div>
+            
 
         </div>
 

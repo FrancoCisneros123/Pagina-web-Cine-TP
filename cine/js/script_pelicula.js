@@ -1,35 +1,36 @@
 let id_pelicula = document.getElementById("id_pelicula");
 let complejo = document.getElementById("complejo");
+let sala = document.getElementById("sala");
 let formato = document.getElementById("formato");
 let dia = document.getElementById("dia");
 let horario = document.getElementById("horario");
 let comprar = document.getElementById("comprar");
 
-window.addEventListener("load",()=>
-{
+window.addEventListener("load", () => {
     cargarComplejos();
+    cargarSala();
     cargarDias();
     cargarFormatos();
 });
 
-complejo.addEventListener("input", ()=>
-{
+complejo.addEventListener("input", () => {
     habilitarComprar();
 });
 
-formato.addEventListener("input", ()=>
-{
+sala.addEventListener("input", () => {
     habilitarComprar();
 });
 
-dia.addEventListener("input", ()=>
-{
+formato.addEventListener("input", () => {
+    habilitarComprar();
+});
+
+dia.addEventListener("input", () => {
     cargarHorarios();
     habilitarComprar();
 });
 
-horario.addEventListener("input", ()=>
-{
+horario.addEventListener("input", () => {
     habilitarComprar();
 });
 
@@ -43,6 +44,19 @@ function cargarComplejos() {
     };
 
     xhttp.open("get", "cargar_pelicula_entrada_complejos.php");
+    xhttp.send();
+}
+
+function cargarSala() {
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState === 4 && xhttp.status === 200) {
+            sala.innerHTML = xhttp.responseText;
+        }
+    };
+
+    xhttp.open("get", "cargar_pelicula_sala.php?id_pelicula=" + id_pelicula.value);
     xhttp.send();
 }
 
@@ -85,9 +99,8 @@ function cargarHorarios() {
     xhttp.send();
 }
 
-function habilitarComprar()
-{
-    if (complejo.value != "" && formato.value != "" && dia.value != "" && horario.value != "")
+function habilitarComprar() {
+    if (complejo.value != "" && sala.value != "" && formato.value != "" && dia.value != "" && horario.value != "") 
         comprar.disabled = false;
     else
         comprar.disabled = true;

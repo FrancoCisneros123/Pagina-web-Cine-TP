@@ -7,6 +7,7 @@ let cineAsientosDerecha = document.getElementById("cine-asientos-derecha");
 let reservar = document.getElementById("reservar");
 let arrayDisponibilidad = [];
 let idSala = document.getElementById("id_sala");
+let continuar = document.getElementById("continuar");
 
 window.addEventListener("load", () => {
     crearFilaAsientos();
@@ -67,13 +68,15 @@ reservar.addEventListener("click", () => {
 
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState === 4 && xhttp.status === 200)
-            cargarInformacionAsientos()
+            cargarInformacionAsientos();
+            continuar.disabled = false;
     }
 
 
     xhttp.open("get", "registrar_asientos.php" + array + "&id_sala=" + idSala.value);
     xhttp.send(JSON.stringify(array));
 
+    
 })
 
 

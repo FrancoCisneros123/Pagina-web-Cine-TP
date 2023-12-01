@@ -54,6 +54,13 @@ require_once "informacion_pelicula.php";
                             </select>
                         </div>
 
+                        
+                        <div>
+                            Seleccione una sala:
+                            <select class="form-select" name="sala" id="sala">
+                            </select>
+                        </div>
+
                         <div>
                             Seleccione el día:
                             <select class="form-select" name="dia" id="dia">
@@ -83,7 +90,7 @@ require_once "informacion_pelicula.php";
                     <br><button type="submit" class="btn btn-danger" name="comprar" id="comprar" disabled>Comprar entradas</button>
                 </form>
 
-                <a href="sala.php" class="btn btn-primary mt-3" name="ver-sala" id="ver-sala">Ver sala</a>
+                <!--<button class="btn btn-primary mt-3" name="ver-sala" id="ver-sala" disabled>Ver sala</button> -->
             </div>
         </div>
 
