@@ -21,6 +21,26 @@ class clienteControlador
                 $arrErrores['email'] = 'Error, complete el campo correctamente';
             }*/
 
+            if (isset($_POST['email'])) {
+
+                $email = $_POST['email'];
+                require_once('../conexion.php');
+                /** @var \PDO $conn */
+
+                $sql = "SELECT * FROM usuario WHERE email = :email";
+                $stmt = $conn->prepare($sql);
+                $stmt->bindParam(':email', $email);
+                $stmt->execute();
+
+
+                $rowCount = $stmt->rowCount();
+
+
+                if ($rowCount > 0) {
+                    $arrErrores['email'] = 'Error, el mail ingresado ya existe';
+                }
+            }
+
             if (!isset($_POST['contrasena']) || strlen($_POST['contrasena']) < 6) {
                 $arrErrores['contraseña'] = 'Error, complete el campo correctamente';
             }
@@ -48,7 +68,7 @@ class clienteControlador
 
                     //se crea un objeto con el constuctor de la clase usuario (Usamos la clase usuario pero creamos un gerente) y se le pasa como parametro las variables que contienen lo que se recibio del formulario
                     $objUsuario = new usuario($nombre, $apellido, $email, $contrasena, $confirmarcontrasena, $nacimiento, $genero, $celular, $tipo_usuario);
-                    $registro_insertado = $objUsuario->save(); //se invoca al metodo save, que contiene la logica del guardado en la base de datos, el true or false que devuelva se guarda en la variable registro_insertado
+                    $registro_insertado = $objUsuario->save($conn); //se invoca al metodo save, que contiene la logica del guardado en la base de datos, el true or false que devuelva se guarda en la variable registro_insertado
 
                 } catch (Exception $e) {
                     echo "Error inesperado" . $e->getMessage();
