@@ -10,64 +10,72 @@
     require("MVC/controladores/permisos.php");
     $permisosObj = new Permisos();
 
-    if(! $permisosObj->tienePermiso("Crear beneficio", $_SESSION["id_usuario"])) {
+    if(! $permisosObj->tienePermiso("Editar beneficio", $_SESSION["id_usuario"])) {
         require ("MVC/vistas/error_permiso.php");
         die();
     }
+
     $arrayErrores = [];
     $resultado = false;
 
-    if(isset($_POST["submit"]))
+    if(isset($_GET["id_beneficio"]))
     {
-        $nombre = $_POST["nombre"];
-        $descripcion = $_POST["descripcion"];
-        $porcentaje = (float)$_POST["porcentaje"];
-
-        if (empty($descripcion) || strlen($descripcion) >= 100)
+        if(isset($_POST["submit"]))
         {
-            $arrayErrores["descripcion"]='La descripción no debe estar vacía y no debe superar más de los 100 cáracteres.';
+            $nombre = $_POST["nombre"];
+            $descripcion = $_POST["descripcion"];
+            $porcentaje = (float)$_POST["porcentaje"];
+            $id_beneficio = $_GET["id_beneficio"];
+    
+            if (empty($descripcion) || strlen($descripcion) >= 100)
+            {
+                $arrayErrores["descripcion"]='La descripción no debe estar vacía y no debe superar más de los 100 cáracteres.';
+            }
+    
+            if (empty($nombre) || strlen($nombre) >= 50)
+            {
+                $arrayErrores["nombre"]='El nombre no debe estar vacío y no debe superar más de los 50 cáracteres.';
+            }
+    
+            if (empty($porcentaje) || !is_numeric($porcentaje))
+            {
+                $arrayErrores["porcentaje"]='El porcentaje debe ser un valor númerico';
+            }
+                
+            $arrayErrores = array_filter($arrayErrores);
+    
+            if(empty($arrayErrores))
+            {
+         
+                require_once("conexion.php");
+                /** @var \PDO $conn */
+                 $query = 'UPDATE beneficio SET nombre_beneficio=:nombre, descripcion=:descripcion, porcentaje_descuento=:porcentaje
+                            WHERE id_beneficio = :id_beneficio';
+                $sql = $conn->prepare($query);
+    
+                $sql->bindParam(':nombre',$nombre);
+                $sql->bindParam(':descripcion', $descripcion);
+                $sql->bindParam(':porcentaje', $porcentaje);
+                $sql->bindParam(':id_beneficio', $id_beneficio);
+    
+                $resultado = $sql->execute();
+                $conn = null;
+                header("location: beneficio_menu.php");
+            }
+    
         }
-
-        if (empty($nombre) || strlen($nombre) >= 50)
-        {
-            $arrayErrores["nombre"]='El nombre no debe estar vacío y no debe superar más de los 50 cáracteres.';
-        }
-
-        if (empty($porcentaje) || !is_numeric($porcentaje))
-        {
-            $arrayErrores["porcentaje"]='El porcentaje debe ser un valor númerico';
-        }
-            
-        $arrayErrores = array_filter($arrayErrores);
-
-        if(empty($arrayErrores))
-        {
-     
-            require_once("conexion.php");
-            /** @var \PDO $conn */
-             $query = 'INSERT INTO beneficio (nombre_beneficio,descripcion,porcentaje_descuento) VALUES (:nombre,:descripcion,:porcentaje)';
-            $sql = $conn->prepare($query);
-
-            $sql->bindParam(':nombre',$nombre);
-            $sql->bindParam(':descripcion', $descripcion);
-            $sql->bindParam(':porcentaje', $porcentaje);
-
-            $resultado = $sql->execute();
-            $conn = null;
-        }
-
     }
-
-
+    
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineEnCartelera - Nuevo beneficio</title>
+    <title>CineEnCartelera - Actualizar beneficio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos_inicio.css">
@@ -94,7 +102,7 @@
 
     <div class="container">
         <a href="beneficio_menu.php">Volver atrás</a> 
-        <h2 class="mt-3">Agregar nuevo beneficio:</h2><br>
+        <h2 class="mt-3">Actualizar beneficio:</h2><br>
 
         <?php
          if (count($arrayErrores) > 0) {
@@ -107,12 +115,12 @@
         }
         if($resultado == true){
             echo '<div class="alert alert-success" role="alert">
-            <i class="bi bi-check-lg"></i> Se agregó la nueva notificación con éxito.
+            <i class="bi bi-check-lg"></i> Se agregó el nuevo beneficio con éxito.
           </div>';
         }
         ?>
        
-        <form action="" method="post">
+       <form action="" method="post">
             <label for="nombre">Nombre de beneficio:</label>
             <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Debe tener menos de 50 cáracteres"><br>
 
@@ -123,11 +131,12 @@
             <input class="form-control" type="number" name="porcentaje" id="porcentaje" placeholder="Debe tener menos de 50 cáracteres"><br>
 
             <div class="mt-4">
-            <button class="btn btn-warning" name="submit">Agregar</button>
+            <button class="btn btn-warning" name="submit">Actualizar</button>
             <a href="beneficio_menu.php" class="btn btn-danger">Cancelar</a>
             </div>
             
         </form>
+     
     </div><br>
 
     <?php require_once "footer.php";?>
