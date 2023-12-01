@@ -270,3 +270,10 @@ h3 {
 .ocultar-check {
     display: none;
 }
+
+/*menu*/
+.botones {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
