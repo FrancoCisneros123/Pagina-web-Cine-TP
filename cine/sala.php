@@ -63,14 +63,11 @@
 
         <div class="referencias">
 
-            <p class="parrafo-referencia">Libre</p>
-            <div class="asiento ejemplo asiento-libre asiento-libre-ejemplo"></div>
+            <p class="parrafo-referencia me-2">Libre</p>
+            <div class="asiento ejemplo asiento-libre asiento-libre-ejemplo me-4"></div>
 
-            <p class="parrafo-referencia">Reservado</p>
-            <div class="asiento ejemplo asiento-reservado asiento-reservado-ejemplo"></div>
-
-            <p class="parrafo-referencia">Ocupado</p>
-            <div class="asiento ejemplo asiento-ocupado asiento-ocupado-ejemplo"></div>
+            <p class="parrafo-referencia me-2">Ocupado</p>
+            <div class="asiento ejemplo asiento-ocupado asiento-ocupado-ejemplo me-4"></div>
 
         </div>
 

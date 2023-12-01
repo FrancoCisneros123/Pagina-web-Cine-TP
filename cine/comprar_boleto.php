@@ -75,7 +75,7 @@ else
                     <input type="hidden" name="nombre_pelicula" id="nombre_pelicula" value=<?php echo $_POST["nombre_pelicula"] ?>>
                     <input type="hidden" name="nombre_imagen" id="nombre_imagen" value=<?php echo $_POST["nombre_imagen"] ?>>
 
-                    <br><button type="submit" class="btn btn-success">Reservar asientos</button>
+                    <br><button type="submit" class="btn btn-success mb-5">Reservar asientos</button>
                 </form>
             </div>
             
