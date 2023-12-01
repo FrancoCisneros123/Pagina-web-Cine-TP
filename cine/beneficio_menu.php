@@ -51,7 +51,7 @@
         
         <h2 class="mt-5"><i class="bi bi-piggy-bank"></i> Notificaciones creadas:</h2>
         <br>
-        <a class="btn btn-outline-warning" href="nueva_notificacion.php">Crear nuevo beneficio</a>
+        <a class="btn btn-outline-warning" href="crear_beneficio.php">Crear nuevo beneficio</a>
         <div class="table-responsive rounded mt-4">
             <table class="table table-dark table-striped border-danger">
                 <thead>
