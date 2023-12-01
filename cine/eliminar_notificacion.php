@@ -11,7 +11,7 @@ if (!isset($_SESSION["emailLogin"])) {
 require("MVC/controladores/permisos.php");
 $permisosObj = new Permisos();
 
-if(! $permisosObj->tienePermiso("Crear notificación", $_SESSION["id_usuario"])) {
+if(! $permisosObj->tienePermiso("Eliminar notificación", $_SESSION["id_usuario"])) {
     require ("MVC/vistas/error_permiso.php");
     die();
 }
@@ -19,6 +19,5 @@ if(! $permisosObj->tienePermiso("Crear notificación", $_SESSION["id_usuario"]))
 
 require ("MVC/controladores/notificacionControlador.php");
 $pelicula_controlador = new NotificacionControlador();
-$pelicula_controlador->nuevaNotificacion();
-
+$pelicula_controlador->eliminarNotificacion();
 ?>

@@ -6,7 +6,27 @@ include("conexion.php"); // Incluye el archivo de conexión a la base de datos
 $error = "";
 
 if (isset($_SESSION["emailLogin"])) {
-    header("location: inicio.php");
+
+    if($_SESSION["id_tipo_usuario"] == 1)
+        {
+            header("location: inicio.php");
+            die();
+        }
+        else
+        {
+            if($_SESSION["id_tipo_usuario"] == 2)
+            {
+                header("location: admin/inicio_admin.php");
+                die();
+            }
+            else
+            {
+                if($_SESSION["id_tipo_usuario"] == 3){
+                    header("location: home_gerente.php");
+                    die();
+                }
+            }
+        }
 }
 
 if (isset($_POST["emailLogin"]) && isset($_POST["passwordLogin"])) {
