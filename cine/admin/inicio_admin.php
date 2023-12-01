@@ -27,6 +27,10 @@ if (!isset($_SESSION["emailLogin"])) { //si no esta seteado
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <script defer src="../js/inicio_admin.js"></script>
+    <!-- Iconos bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
 </head>
 
 <body>

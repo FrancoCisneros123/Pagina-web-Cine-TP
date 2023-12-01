@@ -111,6 +111,15 @@ class Pelicula
         return $resultado;
     }
 
+    public function eliminarPelicula($id_pelicula)
+    {
+        require("conexion.php");
+        $sql = "DELETE FROM pelicula WHERE id_pelicula = :id_pelicula";
+        $query = $conn->prepare($sql);
+        $query->bindParam(":id_pelicula", $id_pelicula);
+        $query->execute();
+    }
+
     public function seleccionarTodasLasPeliculas()
     {
         require_once("conexion.php");

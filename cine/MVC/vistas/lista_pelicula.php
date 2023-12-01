@@ -38,7 +38,7 @@
             <a class="nav-link link-warning" href="gerente_funciones.php"><i class="bi bi-clock"></i> Funciones</a>
             <a class="nav-link link-warning" href="#"> <i class="bi bi-door-closed"></i></i>Salas</a>
             <a class="nav-link link-warning" href="notificacion_menu.php"><i class="bi bi-bell"></i> Notificaciones</a>
-            <a class="nav-link link-warning" href="#"><i class="bi bi-piggy-bank"></i> Beneficios</a>
+            <a class="nav-link link-warning" href="beneficio_menu.php"><i class="bi bi-piggy-bank"></i> Beneficios</a>
         </nav>
         
         <h2 class="mt-5"><i class="bi bi-film"></i> Listado de peliculas</h2>

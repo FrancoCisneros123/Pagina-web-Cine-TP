@@ -69,6 +69,11 @@ class PeliculaControlador
             require ("MVC/modelos/pelicula.php");
             $peliculaObj = new Pelicula();
             $peliculaSeleccionada = $peliculaObj->seleccionarPelicula($_GET["id_pelicula"]);
+            if(isset($_POST["aceptar"]))
+               {
+                    $peliculaObj->eliminarPelicula($_GET["id_pelicula"]);
+                    header("location: home_gerente.php");
+               }
             $peliculaObj = null;
             
             

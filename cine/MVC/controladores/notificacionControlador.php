@@ -74,6 +74,26 @@ use notificacion;
             $notificacionObj = null;
         }
 
+        public function eliminarNotificacion()
+        {
+            require ("MVC/modelos/notificacion.php");
+            $notificacionObj = new Notificacion();
+            $notificacionSeleccionada = 0;
+
+            if(isset($_GET["id_notificacion"]))
+            {
+               $notificacionSeleccionada = $notificacionObj->seleccionarNotificacion($_GET["id_notificacion"]);
+               if(isset($_POST["aceptar"]))
+               {
+                    $notificacionObj->eliminarNotificacion($_GET["id_notificacion"]);
+                    header("location: notificacion_menu.php");
+               }
+            }
+
+            require ("MVC/vistas/eliminar_notificacion_vista.php");
+          
+        }
+
        
     }
 ?>

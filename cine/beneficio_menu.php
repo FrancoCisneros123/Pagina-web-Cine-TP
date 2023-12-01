@@ -1,10 +1,19 @@
+<?php 
+     require_once("conexion.php");
+     /** @var \PDO $conn */
+     $lista_beneficio = $conn->query("SELECT * FROM beneficio");
+     $conn = null;
+     $lista_beneficio = $lista_beneficio->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineEnCartelera - Notificaciones</title>
+    <title>CineEnCartelera - Beneficios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos_inicio.css">
@@ -36,35 +45,35 @@
             <a class="nav-link link-warning" href="home_gerente.php"><i class="bi bi-film"></i> Peliculas</a>
             <a class="nav-link link-warning" href="gerente_funciones.php"><i class="bi bi-clock"></i> Funciones</a>
             <a class="nav-link link-warning" href="#"> <i class="bi bi-door-closed"></i></i>Salas</a>
-            <a class="nav-link link-black active" href="#"><i class="bi bi-bell"></i> Notificaciones</a>
-            <a class="nav-link link-warning" href="beneficio_menu.php"><i class="bi bi-piggy-bank"></i> Beneficios</a>
+            <a class="nav-link link-warning" href="notificacion_menu.php"><i class="bi bi-bell"></i> Notificaciones</a>
+            <a class="nav-link link-black active" href="#"><i class="bi bi-piggy-bank"></i> Beneficios</a>
         </nav>
         
-        <h2 class="mt-5"><i class="bi bi-bell-fill"></i> Notificaciones creadas:</h2>
+        <h2 class="mt-5"><i class="bi bi-piggy-bank"></i> Notificaciones creadas:</h2>
         <br>
-        <a class="btn btn-outline-warning" href="nueva_notificacion.php">Crear nueva notificacion</a>
+        <a class="btn btn-outline-warning" href="nueva_notificacion.php">Crear nuevo beneficio</a>
         <div class="table-responsive rounded mt-4">
             <table class="table table-dark table-striped border-danger">
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Nombre</th>
-                        <th>Descripción</th>
+                        <th>Descuento %</th>
                         <th></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php 
-                        if(!empty($lista_notificaciones))
+                        if(!empty($lista_beneficio))
                         {
-                            foreach ($lista_notificaciones as $notificacion) {
+                            foreach ($lista_beneficio as $beneficio) {
                                 echo "<tr>";
-                                echo '<td name="id">' . $notificacion["id_notificacion"] . "</td>";
-                                echo "<td>" . $notificacion["nombre_notificacion"] . "</td>";
-                                echo "<td>" . $notificacion["descripcion"] . "</td>";
-                                echo "<td>" . '<a href="actualizar_notificacion.php?id_notificacion=' . $notificacion["id_notificacion"] . '" class="btn btn-outline-success"><i class="bi bi-pencil-square"></i>Editar</a></td>';
-                                echo "<td>" . '<a href="eliminar_notificacion.php?id_notificacion=' . $notificacion["id_notificacion"] . '" class="btn btn-outline-danger"><i class="bi bi-trash"></i>Eliminar</a></td>';
+                                echo '<td name="id">' . $beneficio["id_beneficio"] . "</td>";
+                                echo "<td>" . $beneficio["nombre_beneficio"] . "</td>";
+                                echo "<td>" . $beneficio["porcentaje_descuento"] . "</td>";
+                                echo "<td>" . '<a href="editar_beneficio.php?id_notificacion=' . $beneficio["id_beneficio"] . '" class="btn btn-outline-success"><i class="bi bi-pencil-square"></i>Editar</a></td>';
+                                echo "<td>" . '<a href="eliminar_beneficio.php?id_notificacion=' . $beneficio["id_beneficio"] . '" class="btn btn-outline-danger"><i class="bi bi-trash"></i>Eliminar</a></td>';
                                 echo "</tr>";
                             }
                         }
